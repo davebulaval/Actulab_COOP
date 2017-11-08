@@ -1,0 +1,134 @@
+\documentclass[11pt,french]{report}
+  \usepackage{babel} %%french
+  \usepackage{amsmath,amsfonts,amssymb} %%maths
+  \usepackage[utf8]{inputenc}   % LaTeX
+  \usepackage[T1]{fontenc}      % LaTeX
+  \usepackage[dvipsnames,table,xcdraw]{xcolor}
+  
+  %% image
+  \usepackage{graphicx}
+  	\graphicspath{{./fig/}} %fig path
+  %%profondeur de la numérotation du TOC
+  \setcounter{secnumdepth}{3} 
+  %%lien hypertex
+  \usepackage[colorlinks, allcolors=Blue]{hyperref} 
+  %% package pour modifier les chapitres #2
+  \usepackage{titlesec}
+  %% for number separation
+  \usepackage[autolanguage]{numprint}
+
+%% for licence
+  \usepackage{tabularx}
+  \usepackage{multirow}
+  %% no indent
+  \setlength{\parindent}{0pt}
+  \frenchbsetup{StandardItemLabels=true} % pour obtenir des puces par défaut dans les listes à puces A.B.
+  %% for moreInfo 
+  \usepackage{fontawesome} %%also cool logo
+  \usepackage[framemethod=TikZ]{mdframed}
+  
+  % Creation of environment to add additional informations
+  % Provided by Samuel Cabral Cruz
+\mdfsetup{
+	linewidth=2pt,
+	nobreak=true,
+	backgroundcolor=Blue!10,
+	roundcorner=10pt}	
+\newenvironment{moreInfo}[1]
+	{\begin{mdframed}
+	\textcolor{darkgray}{\huge \raisebox{-3.5pt}{\faInfo} 
+	\hspace{0.5cm} \large\bfseries #1}\\[5pt]
+	\normalsize
+	\makebox[0.1\textwidth][l]{}	
+	\begin{minipage}{10cm}}
+	{	\end{minipage}
+	\end{mdframed}}
+	
+%% meta donnée document
+\title{Résolution de problématique de \\ Co-Operators \\ \bigskip Où sont les clients que nous ciblons ?}
+\author{\textbf{Présenter par \\ David Beauchemin}}
+\date{\today}
+\def\versionnumber{1.0}
+  
+\begin{document}
+
+
+
+\makeatletter
+  \begin{titlepage}
+  \centering
+      {\LARGE \textbf{\textsc{Actulab}}}\\
+    \vspace{2cm}
+    \vspace{2cm}
+      {\LARGE \textbf{\@title}} \\
+    \vspace{2cm}
+    \vfill
+       {\Large \@author} \\
+    \vspace{8cm}
+        {\large\textbf{\versionnumber}}\\
+    \vfill
+  \end{titlepage}
+\makeatother
+
+%%%%license %%%%%
+\include{section/license}
+\pagebreak
+
+%%%%Remerciements %%%%%
+\include{section/remerciements}
+
+
+\tableofcontents
+
+\newpage
+
+%%%%%% SOMMAIRE %%%%%%%%
+\chapter*{Rapport sommaire}
+
+\section*{Détails techniques sommaires}
+\begin{itemize}
+\item Données libre du recensement canadien de \href{http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/download-telecharger/comp/page_dl-tc.cfm?Lang=F}{2016} 
+\item ...
+\end{itemize}
+\section*{Hypothèse utilisée}
+
+\section*{Application \emph{Shiny}}
+
+\section*{Résultat sommaire}
+\href{https://davebulaval.shinyapps.io/personnasIdentificateur/}{Shiny}
+\section*{Code source}
+Il est possible de consulter l'ensemble du code source et les données utilisées pour le projet à partir de la \href{https://davebulaval.github.io/Actulab_COOP/}{page web} du dépôt \href{https://github.com/davebulaval/Actulab_COOP}{\emph{GitHub}}.
+
+
+
+%%%%%% Content %%%%%%%%
+\chapter*{Rapport détaillé}
+
+\section*{Détails de la problématique}
+Co-operators désire déterminer la distribution géographique de différents personas à l'aide de données ouvertes. 
+...
+
+\section*{Détails techniques}
+Toutes les données utiliser dans le cadre de se projet provienne de source libre. 
+
+\section*{Objectifs}
+...
+
+\section*{Outils utilisés}
+
+\section*{Méthodologie}
+Indépendance
+test chi square
+
+\section*{Avantage-Inconvénient}
+
+
+\section*{Résultats}
+
+\section*{Piste d'amélioration}
+
+\section*{Conclusion}
+
+
+
+\end{document}
