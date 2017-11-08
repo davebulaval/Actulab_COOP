@@ -1,0 +1,205 @@
+---
+title: "Introduction"
+author: "David Beauchemin"
+date: "31 octobre 2017"
+output:
+  pdf_document:
+    fig_caption: yes
+    highlight: tango
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+fontsize: 12pt
+geometry: margin=1in
+lang: fr
+urlcolor: blue
+---
+
+\newpage
+
+# Définition des caratéristiques des personas
+
+## Personas \# 1
+
+### Caratéristiques initiales ++
+
+1. Âge : entre 16 et 26 ans (Génération *millenials*)
+2. Salaire annuel : 20 000 $ 
+3. Emploi : Étudiant
+4. Style de vie : Célibataire, colocation/parent, numérique
+5. Moyen de transport
+
+### Caractéristiques supplémentaires
+
+1. Utilisation des réseaux sociaux (*Snapchat, Facebook, Instagram*)
+2. Moyen de communication
+3. Type de média d'écoute (*Netflix et Internet*) / divertissement
+4. Internet of thing (*iWatch*)
+5. Niveau de scolarité 
+6. Proximité d'un lieu d'établissement CÉGEP ou universitaire
+
+
+### Divers
+Génération significativement influencé par les nouvelles technologies et offended.
+
+
+## Personas \# 2
+
+### Caractéristiques initiales ++
+
+1. Âge : entre 32 et 39 ans (fin de la génération *X* et début de la génération *millenials*)
+2. Salaire annuel : 51 000 $ 
+3. Emploi : Professionnel
+4. Style de vie : conjoint de fait/mariée, propriétaire, parents
+5. Moyen de transport (nombre d'auto?)
+6. Lieu de résidence - banlieu
+
+### Caractéristiques supplémentaires
+
+1. Proximité d'uen école primaire/secondaire
+2. Proximité d'une garderie
+3. Quartier jeune - proximité parc
+4. Utilisation fréquente des nouvelles techonologies et réseaux sociaux (à vérifier)
+5. Niveau de scolarité 
+6. Montant hypothéque plus élevé
+
+
+### Divers
+Entre deux générations.Génération fortement touché par la précarité économique, situation d'emploi difficile.
+
+## Peronas \#3
+
+### Caractéristiques initiales ++
+
+1. Âge : entre 40 et 52 ans (Génération *X*)
+2. Salaire annuel : 105 000 $
+3. Emploi : Travailleur autonome - propriétaire d'une PME
+4. Style de vie : Marié, parents, propriétaire
+5. Moyen de transport (nombre d'auto ?)
+6. Lieu de résidence - banlieu
+
+### Caractéristiques supplémentaires
+
+1. Quartier plus âgé
+2. Montant hypothèque plus bas
+3. Utilisation moins importante des réseaux sociaux (à vérifier)
+4. 
+
+### Divers
+Caractéristique d'instabilité économique. Marqué par la fin des empires coloniaux.
+
+## Personas \# 4
+
+### Caractéristiques initiales ++
+
+1. Âge : entre 53 et 65 ans (Génération *baby-boom*)
+2. Salaire annuel : 50 000$
+3. Emploi : Professionnel, semi-retraite
+4. Style de vie : Marié, parents mature, propriétaire
+5. Moyen de transport (nombre d'auto ?)
+6. Lieu de résidence - banlieu
+
+### Caractéristiques supplémentaires
+
+1. Quartier plus âgé
+2. Maison âgé
+2. Montant hypothèque plus bas ou absente
+3. Utilisation faible des réseaux sociaux (à vérifier)
+4. Divertissement
+5. Ligne de téléphone terreste 
+
+### Divers
+
+## Personas \# 5
+
+### Caractéristiques initiales ++
+
+1. Âge : entre 66 et 76 ans (Génération *baby-boom*)
+2. Salaire annuel : 43 000$
+3. Emploi : Professionnel retraité
+4. Style de vie : Marié/veuf, parents mature, grand-parents, propriétaire ou locataire résidence
+5. Moyen de transport
+6. Lieu de résidence - banlieu
+
+### Caractéristiques supplémentaires
+
+1. Quartier plus âgé, résidence
+2. Maison âgé ou résidence
+2. Montant hypothèque plus bas ou absente
+3. Utilisation faible des réseaux sociaux (à vérifier)
+4. Divertissement
+5. Ligne de téléphone terreste 
+6. Répartition par besoin en soins clinique et résidence
+
+### Divers
+
+### Vérifications
+
+1. Vérifier les statsitiques matrimoniales selon l'âge
+2. Vérifier colocation selon l'âge
+3. vérifier le taux de chômage selon l'âge 
+4. Vérifier les taux d'utilisations des réseaux sociaux selon âge
+
+# Base de données
+
+1. Données recensement par régio de tri d'acheminement ([code postal](http://www12.statcan.ca/census-recensement/2016/dp-pd/prof/details/page_Download-Telecharger.cfm?Lang=F&Tab=1&Geo1=PR&Code1=24&Geo2=PR&Code2=01&Data=Count&SearchText=24&SearchType=Begins&SearchPR=01&B1=Language&TABID=3))
+
+2. Caractéristique Québec : Bilinguisme (répartition par [province](http://www12.statcan.gc.ca/census-recensement/2016/as-sa/98-200-x/2016009/98-200-x2016009-fra.cfm))
+
+3. Données ouvertes de ville : [montréal](http://donnees.ville.montreal.qc.ca) et [Québec](http://donnees.ville.quebec.qc.ca)
+
+4. Données ouvertes du [Québec](https://www.donneesquebec.ca/fr/)
+
+5. [Données libres](http://datalibre.ca/links-resources/)
+
+# Variables intéressantes à observer
+
+1. Bilinguisme (plus fort chez les 50 ans et moins ? bon indicateur)
+2. Status civil (marié pour les 60 et + et conjoint de fait en bas)
+3. Titulaire de permis et région ?
+4. Formation
+5. Enfants
+6. Taux natalité par code postal
+7. Taux mortalité par code postal
+8. Migration par code postal
+9. École primaire dans un rayon de X km
+10. École secondaire dans un rayon de X km
+11. CEGEP ou université à proximité 
+
+# Idée Variable Shiny (pas obligatoire ?)
+
+1. Région - liste de choix (obligatoire pour améliorer la carte étant donner pas de leaflet)
+     1. Laval
+     2. Montréal
+     3. Montréal métropolitain
+     4. Québec
+     5. ...
+2. Sexe
+3. Âge
+4. Profession (liste ?)
+5. Statut civil
+6. Salaire
+7. ...
+
+# Notes:
+Faire hypothèse de distribution indépendante et uniforme
+
+# Étapes
+
+1. Recherche des données
+2. Segmentations des données
+3. vérifications des valeurs avec d'autres études
+
+# Hypothèses :
+
+1. Suposition d'une distribution uniforme sur les intervalles
+2. Indépendance entre les variables
+3. Distribution uniforme de l'âge
+4. Hypothèse de colocation - Répartition selon tranche d'âge selon [étude](https://www.mfa.gouv.qc.ca/fr/Famille/chiffres-famille-quebec/bulletin_quelle_famille/Pages/aut2013_no1_tab4.aspx) distribution uniforme par code postal
+5. Distribution de la population [active](http://www.statcan.gc.ca/tables-tableaux/sum-som/l02/cst01/labor07b-fra.htm) uniforme sur le territoire et fractionnement et utilisation prédiction occupation pouplation [2015](http://open.canada.ca/data/en/dataset/e80851b8-de68-43bd-a85c-c72e1b3a3890)
+6. Étudiants, utilisation donnée de 2011 [l'étude](http://www.education.gouv.qc.ca/fileadmin/administration/librairies/documents/Ministere/acces_info/Statistiques/Statistiques_ES/Statistiques_enseignement_superieur_2013.pdf)
+7. Répartition des étudiants selon la fréquence [page 17 - 18](http://www.education.gouv.qc.ca/fileadmin/administration/librairies/documents/Ministere/acces_info/Statistiques/Statistiques_ES/Statistiques_enseignement_superieur_2013.pdf)
+8. Distribution uniforme des étudiants. Très faible
+9. Source [emploi](http://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/dt-td/Rp-fra.cfm?TABID=4&LANG=F&A=R&APATH=3&DETAIL=0&DIM=0&FL=A&FREE=0&GC=24&GL=-1&GID=1118301&GK=1&GRP=1&O=D&PID=106042&PRID=0&PTYPE=105277&S=0&SHOWALL=0&SUB=0&Temporal=2013&THEME=96&VID=0&VNAMEE=&VNAMEF=&D1=2&D2=0&D3=0&D4=0&D5=0&D6=0)
+10. Retraite à 65 ans. Aucun travailleur d eplus de 65 ans.
+

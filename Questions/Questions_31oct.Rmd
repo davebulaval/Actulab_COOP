@@ -1,0 +1,19 @@
+---
+title: "Questions Actulab-COOP"
+author: "David Beauchemin"
+date: "31 octobre 2017"
+output: pdf_document
+---
+
+# Listes de questions
+
+## Personnas
+
+J'aimerai valider les caractéristiques des personnas : \newline
+Pour Jacob, il s'agit de trouver où sont situés les étudiants de 16-26 ans en colocation ? \newline
+Pour Maria, il s'agit de trouver les professionnels de 32-39 ans propriétaires d'une maison avec enfant ? \newline
+En résumé, il s'agit de trouver des caractéristiques précises selon un groupe d'âge pour cibler l'assurance auto et habitation ?
+
+## Territoire
+S'agit-il de la province du Québec seulement ou l'ensemble du Canada ?
+
