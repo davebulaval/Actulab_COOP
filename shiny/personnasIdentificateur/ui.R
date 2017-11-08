@@ -7,7 +7,10 @@
 #    http://shiny.rstudio.com/
 #
 
+library(leaflet)
+library(readr)
 library(shiny)
+library(rgdal)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(

@@ -9,24 +9,11 @@
 
 
 
-
-library(shiny)
 library(leaflet)
 library(readr)
+library(shiny)
 
-# Import dataset
-dataSetPredict <- read_csv("~/GitHub/Actulab_COOP/Dataset/DatasetModif/dataSetPredict.csv", 
-                           col_types = cols(X1 = col_skip()))
-probColocation <- read_csv("~/GitHub/Actulab_COOP/Dataset/DatasetModif/probColocation.csv",
-                           col_types = cols(X1 = col_skip()))
-dataEducation <- read_csv("~/GitHub/Actulab_COOP/Dataset/DatasetModif/dataEducation.csv",
-                          col_types = cols(X1 = col_skip()))
-dataEmploi <- read_csv("~/GitHub/Actulab_COOP/Dataset/DatasetModif/dataEmploi.csv",
-                       col_types = cols(X1 = col_skip()))
-dataEmploi_female <- read_csv("~/GitHub/Actulab_COOP/Dataset/DatasetModif/dataEmploi_female.csv",
-                              col_types = cols(X1 = col_skip()))
-dataEmploi_male <- read_csv("~/GitHub/Actulab_COOP/Dataset/DatasetModif/dataEmploi_male.csv",
-                            col_types = cols(X1 = col_skip()))
+source("~/load_data.R")
 
 # Variable revenu unisexe OK
 # Variable revenu Male/femme OK
@@ -405,7 +392,7 @@ shinyServer(function(input, output) {
                     descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
                                           "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
                                           "<b>Prédiction :</b>", prediction,"<br>",
-                                          "<b>Population :</b>", dataSetPredict$Pop,"<br>")
+                                          "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
                     # palette de couleur
                     pal <- colorNumeric(
                          palette = "Red",
@@ -416,19 +403,24 @@ shinyServer(function(input, output) {
                                      opacity = 1.0, fillOpacity = 0.5,
                                      fillColor = ~colorQuantile("OrRd", unique(prediction))(prediction),
                                      highlightOptions = highlightOptions(color = "white", weight = 2,
-                                                                         bringToFront = TRUE)) %>%
-                         addMarkers(data = dataSetPredictCity,
-                                    ~Long, 
-                                    ~Lat,
-                                    popup = descriptions)
+                                                                         bringToFront = TRUE),
+                                     label = descriptions,
+                                     labelOptions = labelOptions( 
+                                          style = list("front-weight" = "normal", padding = "3px 8px"), 
+                                          textsize = '15px', 
+                                          direction = 'auto' 
+                                     )) 
+
+
                } else if (probProduitCumul != 1){
                     #Calcul de la prédiction
                     prediction <- round(probProduitCumul * dataSetPredict$Pop)
                     # Descriptiosn du popup de la carte
+                    # Descriptiosn du popup de la carte
                     descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
                                           "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
                                           "<b>Prédiction :</b>", prediction,"<br>",
-                                          "<b>Population :</b>", dataSetPredict$Pop,"<br>")
+                                          "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
                     # palette de couleur
                     pal <- colorNumeric(
                          palette = "Red",
@@ -439,17 +431,34 @@ shinyServer(function(input, output) {
                                      opacity = 1.0, fillOpacity = 0.5,
                                      fillColor = ~colorQuantile("OrRd", unique(prediction))(prediction),
                                      highlightOptions = highlightOptions(color = "white", weight = 2,
-                                                                         bringToFront = TRUE)) %>%
-                         addMarkers(data = dataSetPredictCity,
-                                    ~Long, 
-                                    ~Lat,
-                                    popup = descriptions)
+                                                                         bringToFront = TRUE),
+                                     label = descriptions,
+                                     labelOptions = labelOptions( 
+                                          style = list("front-weight" = "normal", padding = "3px 8px"), 
+                                          textsize = '15px', 
+                                          direction = 'auto' 
+                                     )) 
                } else {
-                    leaflet(FSA.shapeCity) %>%
+                    prediction <- probProduitCumul * 0
+                    # Descriptiosn du popup de la carte
+                    descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
+                                          "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
+                                          "<b>Prédiction :</b>", prediction,"<br>",
+                                          "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
+
+                    
+                    leaflet(FSA.shapeCity) %>% addTiles() %>%
                          addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
-                                     opacity = 1.0, fillOpacity = 0.5,
-                                     highlightOptions = highlightOptions(color = "white", weight = 2,
-                                                                         bringToFront = TRUE))
+                                     opacity = 0.5, fillOpacity = 1,
+                                     fillColor = "White",
+                                     highlightOptions = highlightOptions(color = "black", weight = 2,
+                                                                         bringToFront = TRUE),
+                                     label = descriptions,
+                                     labelOptions = labelOptions( 
+                                          style = list("front-weight" = "normal", padding = "3px 8px"), 
+                                          textsize = '15px', 
+                                          direction = 'auto' 
+                                     )) 
                }
           }
      })

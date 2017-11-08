@@ -1,0 +1,13 @@
+name: personnasIdentificateur
+title: personnasIdentificateur
+username:
+account: davebulaval
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 232995
+bundleId: 1064418
+url: https://davebulaval.shinyapps.io/personnasIdentificateur/
+when: 1510122002.11402
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: shapefileFSA/92-179-g2011001-fra.pdf

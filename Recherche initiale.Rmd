@@ -203,3 +203,5 @@ Faire hypothèse de distribution indépendante et uniforme
 9. Source [emploi](http://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/dt-td/Rp-fra.cfm?TABID=4&LANG=F&A=R&APATH=3&DETAIL=0&DIM=0&FL=A&FREE=0&GC=24&GL=-1&GID=1118301&GK=1&GRP=1&O=D&PID=106042&PRID=0&PTYPE=105277&S=0&SHOWALL=0&SUB=0&Temporal=2013&THEME=96&VID=0&VNAMEE=&VNAMEF=&D1=2&D2=0&D3=0&D4=0&D5=0&D6=0)
 10. Retraite à 65 ans. Aucun travailleur d eplus de 65 ans.
 
+
+[code postaux](https://fr.wikipedia.org/wiki/Liste_des_codes_postaux_canadiens_débutant_par_J)
