@@ -10,10 +10,10 @@
 
 
 library(leaflet)
-library(readr)
 library(shiny)
-
-source("~/load_data.R")
+path <- getwd()
+source( "load_data.R" )
+#readRDS(load_data.R)
 
 # Variable revenu unisexe OK
 # Variable revenu Male/femme OK
@@ -172,38 +172,38 @@ shinyServer(function(input, output) {
                }
           } else if (input$selectOccupation > 1){ 
                if (input$checkGroupSexe == 1) { #Femme
-                    if(as.numeric(input$selectAge)){
+                    if(input$selectAge > 0){
                          probProduitCumul <- probProduitCumul * 
-                              dataEmploi_female[as.numeric(input$selectOccupation), 
+                             ( dataEmploi_female[as.numeric(input$selectOccupation), 
                                                 as.numeric(input$selectAge)] / 
-                              sum(dataSetPredict$Pop)
+                              sum(dataSetPredict$Pop))[[1]]
                     } else {
                          probProduitCumul <- probProduitCumul * 
-                              sum(dataEmploi_female[as.numeric(input$selectOccupation),]) / 
-                              sum(dataSetPredict$Pop)
+                              ( sum(dataEmploi_female[as.numeric(input$selectOccupation),]) / 
+                              sum(dataSetPredict$Pop))[[1]]
                     }
                } else if (input$checkGroupSexe == 2) { #Homme
-                    if(as.numeric(input$selectAge)){
+                    if(input$selectAge > 0){
                          probProduitCumul <- probProduitCumul * 
-                              dataEmploi_male[as.numeric(input$selectOccupation), 
+                              ( dataEmploi_male[as.numeric(input$selectOccupation), 
                                               as.numeric(input$selectAge)] /
-                              sum(dataSetPredict$Pop)
+                              sum(dataSetPredict$Pop))[[1]]
                     } else {
                          probProduitCumul <- probProduitCumul * 
-                              sum(dataEmploi_male[as.numeric(input$selectOccupation),]) /
-                              sum(dataSetPredict$Pop)
+                              ( sum(dataEmploi_male[as.numeric(input$selectOccupation),]) /
+                              sum(dataSetPredict$Pop))[[1]]
                     }
                     
                } else { #Total
-                    if(as.numeric(input$selectAge)){
+                    if(input$selectAge > 0){
                          probProduitCumul <- probProduitCumul * 
-                              dataEmploi[as.numeric(input$selectOccupation), 
+                              ( dataEmploi[as.numeric(input$selectOccupation), 
                                          as.numeric(input$selectAge)] /
-                              sum(dataSetPredict$Pop)
+                              sum(dataSetPredict$Pop))[[1]]
                     } else {
                          probProduitCumul <- probProduitCumul * 
-                              sum(dataEmploi[as.numeric(input$selectOccupation), ]) /
-                              sum(dataSetPredict$Pop)
+                              ( sum(dataEmploi[as.numeric(input$selectOccupation), ]) /
+                              sum(dataSetPredict$Pop))[[1]]
                     }
                }
           }
@@ -359,7 +359,7 @@ shinyServer(function(input, output) {
                     if (input$checkGroupSexe != 0){
                          probProduitCumul <- probProduitCumul * 
                               probColocation[6, 
-                                             (4 - as.numeric(input$checkGroupSexe))]
+                                             (4 - as.numeric(input$checkGroupSexe))][[1]]
                     } else {
                          probProduitCumul <- probProduitCumul * probColocation[6, ]$Total
                     }
@@ -393,10 +393,6 @@ shinyServer(function(input, output) {
                                           "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
                                           "<b>Prédiction :</b>", prediction,"<br>",
                                           "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
-                    # palette de couleur
-                    pal <- colorNumeric(
-                         palette = "Red",
-                         domain = prediction)
                     
                     leaflet(FSA.shapeCity) %>% addTiles() %>%
                          addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
@@ -421,10 +417,7 @@ shinyServer(function(input, output) {
                                           "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
                                           "<b>Prédiction :</b>", prediction,"<br>",
                                           "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
-                    # palette de couleur
-                    pal <- colorNumeric(
-                         palette = "Red",
-                         domain = prediction)
+                    
                     
                     leaflet(FSA.shapeCity) %>% addTiles() %>%
                          addPolygons(color = "#444444", weight = 1, smoothFactor = 1,

@@ -94,7 +94,7 @@ shinyUI(fluidPage(
                                         choices = list("Oui" = 1, "Non" = 2), selected = 2),
                     conditionalPanel(
                          condition = "input.checkGroupEnfant == 1",
-                         selectInput("num", "Nombre d'enfant",
+                         selectInput("num", "Nombre d'enfants",
                                      list("1" = 1, "2" = 2, "3 et plus" = 3))
                     )  
                )
