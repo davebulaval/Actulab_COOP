@@ -1,8 +1,8 @@
 # Création carte avec shapefile ####
 # install.packages("rgdal")
 library(rgdal)
-(path <-setwd("~/GitHub/Actulab_COOP"))
-
+(path <-setwd(paste("..", "~/GitHub/Actulab_COOP", sep = "")))
+path <- getwd()
 LatLongData <- readOGR(dsn = paste(path, "/Dataset/StatCan_FSA_boundaries", sep = ""), 
                        layer = "StatsCanada_FSA_boundaries")
 LatLongDataQC <- subset(LatLongData, substr(LatLongData$CFSAUID, 1, 1) %in% c("G", "H", "J"))

@@ -13,6 +13,7 @@
 library(shiny)
 library(leaflet)
 library(readr)
+
 # Import dataset
 dataSetPredict <- read_csv("~/GitHub/Actulab_COOP/Dataset/DatasetModif/dataSetPredict.csv", 
                            col_types = cols(X1 = col_skip()))
