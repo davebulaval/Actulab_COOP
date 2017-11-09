@@ -1,15 +1,7 @@
-#library(rgdal)
-getwd()
-
 # Shapefile
-LatLongData <- rgdal::readOGR(dsn = "StatCan_FSA_boundaries", 
-                       layer = "StatsCanada_FSA_boundaries")
-LatLongDataQC <- subset(LatLongData, substr(LatLongData$CFSAUID, 1, 1) %in% c("G", "H", "J"))
-#saveRDS(LatLongDataQC, file = LatLongDataQC)
-
 FSA.shape <- rgdal::readOGR(dsn = "shapefileFSA",
                      layer = "grta000a11a_f")
-FSA.shapeQC <- subset(FSA.shape, substr(FSA.shape$RTACIDU, 1, 3) %in% LatLongDataQC$CFSAUID)
+FSA.shapeQC <- subset(FSA.shape, substr(FSA.shape$RTACIDU, 1, 1) %in% c("G", "H", "J"))
 
 # Import dataset
 library(readr)

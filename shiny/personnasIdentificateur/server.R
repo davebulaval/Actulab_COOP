@@ -1,19 +1,7 @@
-#
-# This is the server logic of a Shiny web application. You can run the 
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
-
-
-
 library(leaflet)
 library(shiny)
-path <- getwd()
+
 source( "load_data.R" )
-#readRDS(load_data.R)
 
 # Variable revenu unisexe OK
 # Variable revenu Male/femme OK

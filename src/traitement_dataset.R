@@ -149,18 +149,3 @@ rownames(emploi_totalQCModif) <- c("Total", "Gestion", "Affaire", "Science_natur
 write.csv(emploi_maleQCModif, paste(path, "/Dataset/DatasetModif/dataEmploi_male.csv", sep = ""), fileEncoding = "UTF-8")
 write.csv(emploi_femaleQCModif, paste(path, "/Dataset/DatasetModif/dataEmploi_female.csv", sep = ""), fileEncoding = "UTF-8")
 write.csv(emploi_totalQCModif, paste(path, "/Dataset/DatasetModif/dataEmploi.csv", sep = ""), fileEncoding = "UTF-8")
-
-# Test hypothèse indépendance ####
-# Chi square
-## Test prob indépendance des variables
-
-propTest <- dataset$Male[15] / dataset$Total[8]
-propTest
-propTest * dataset$Total[8]
-
-# Prob d'être âgé de 20 à 24 ans FOIS prob d'être un homme au canada
-probCJT <- dataset$Total[15] / dataset$Total[8]  * dataset$Male[8] / dataset$Total[8] 
-probCJT * dataset$Total[8]
-
-# Prob d'être divorcé homme au canada entre 20 et 24 ans
-dataset$Total[15] / dataset$Total[8]  * dataset$Male[8] / dataset$Total[8] * dataset$Total[66] / dataset$Total[8] * dataset$Total[8]

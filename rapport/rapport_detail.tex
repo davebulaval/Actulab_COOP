@@ -136,48 +136,249 @@
 \chapter*{Rapport sommaire}
 
 \section*{Détails techniques sommaires}
+
+\subsection*{Analyse du mandat}
+Déterminer la distribution d'une ou plusieurs variables sur un territoire. Prédire la distribution des personas sur un territoire à l'aide de la distribution des variables.
+
+\subsection*{Collecte des données}
+Voici la liste des différentes données et rapports ayant été utilisés lors de la réalisation du rapport :
+
 \begin{itemize}
-\item Données libre du recensement canadien de \href{http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/download-telecharger/comp/page_dl-tc.cfm?Lang=F}{2016}  
+\item Données libres du recensement canadien de \href{http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/download-telecharger/comp/page_dl-tc.cfm?Lang=F}{2016} 
+\item Listes des études utilisées pour les hypothèses :
+     \begin{itemize}
+     \item Bulletin d'information statistique du ministère de la famille du Québec : \href{https://www.mfa.gouv.qc.ca/fr/Famille/chiffres-famille-quebec/bulletin_quelle_famille/Pages/aut2013_no1_tab4.aspx}{Quelle famille ?};
+     \item Enquête nationale auprès des ménages \href{http://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/dt-td/Rp-fra.cfm?TABID=2&LANG=F&A=R&APATH=3&DETAIL=0&DIM=0&FL=A&FREE=0&GC=24&GL=-1&GID=1118301&GK=1&GRP=1&O=D&PID=106042&PRID=0&PTYPE=105277&S=0&SHOWALL=0&SUB=0&Temporal=2013&THEME=96&VID=0&VNAMEE=&VNAMEF=&D1=2&D2=0&D3=0&D4=0&D5=0&D6=0}{2011};
+     \item Statistiques de l'enseignement supérieur \href{http://www.education.gouv.qc.ca/fileadmin/administration/librairies/documents/Ministere/acces_info/Statistiques/Statistiques_ES/Statistiques_enseignement_superieur_2013.pdf}{2013}.
+     \end{itemize}
+\item Polygones des régions de tri d'acheminement \href{http://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-fra.cfm}{nationaux}
+\item Listes des régions de tri \href{https://fr.wikipedia.org/wiki/Liste_des_codes_postaux_canadiens_débutant_par_J}{d'acheminement}
 \end{itemize}
+
 \section*{Hypothèse utilisée}
+Hypothèses utilisées pour le projet :
+\begin{enumerate}
+\item Indépendance entre les variables
+\item Distribution uniforme sur les intervalles d'âges
+\item Distribution uniforme des travailleurs (provincial)
+\item Distribution uniforme des étudiants (provincial)
+\item Distribution uniforme des colocataires (provincial)
+\item Retraite à 65 ans
+\end{enumerate}
 
 \section*{Application \emph{Shiny}}
 
+Afin de visualiser la distribution des personas et de permettre une flexibilité d'analyse future, une application \href{https://www.rstudio.com/products/shiny/}{\emph{Shiny}} à été développée. L'application \href{https://davebulaval.shinyapps.io/personnasIdentificateur/}{personasIdentificateur} permet de:
+\begin{itemize}
+\item sélectionner les différentes variables à modéliser;
+\item de modéliser visuellement la densité de la distribution;
+\item d'afficher les territoires observés;
+\item d'afficher, par région de tri d'acheminement, la population totale et la prédiction du nombre de personas identifier dans cette région.
+\end{itemize}
+
+\begin{moreInfo}{\color{Gray}\emph{Utilisation}
+     \color{black}}
+Pour utiliser l'application, il suffit d'accéder à la page web et de sélectionner les variables désirées. Pour afficher les informations de la région de tri d'acheminement, il suffit de glisser le curseur sur celle-ci.
+     \newline
+     Le délai d'exécution peut parfois prendre quelques secondes. 
+\end{moreInfo}
+
 \section*{Résultat sommaire}
-\href{https://davebulaval.shinyapps.io/personnasIdentificateur/}{Shiny}
+.....
+
 \section*{Code source}
 Il est possible de consulter l'ensemble du code source et les données utilisées pour le projet à partir de la \href{https://davebulaval.github.io/Actulab_COOP/}{page web} du dépôt \href{https://github.com/davebulaval/Actulab_COOP}{\emph{GitHub}}.
-
 
 
 %%%%%% Content %%%%%%%%
 \chapter*{Rapport détaillé}
 
 \section*{Détails de la problématique}
-Co-operators désire déterminer la distribution géographique de différents personas à l'aide de données ouvertes. 
-...
+Étant une coopérative d'assurance, Co-operators utilise un réseau de distribution à l'aide de différentes agences dispersées à l'échelle nationale. Celles-ci offrent un ensemble  de produits d'assurances vie et d'assurances dommages.
+\newline
+
+Afin d'offrir un support amélioré aux différentes agences d'assurances de Co-operators, la définition de certaines caractéristiques de profil type est extraite des données clients.  Afin d'identifier la modélisation des variables, l'utilisation des données libres est utilisée pour construire et représenter la distribution. 
 
 \section*{Détails techniques}
-Toutes les données utiliser dans le cadre de se projet provienne de source libre. 
+\subsection*{Mandat}
+
+Le mandat de cette problématique Actulab correspond à déterminer la distribution des différentes variables observées des personas en plus de toutes autres variables jugées pertinente. Cette distribution doit pouvoir être représenter sur un territoire avec une échelle de région de tri d'acheminement (RTA).
+\newline
+
+Prédire la distribution des personas sur un territoire avec une échelle de RTA à l'aide de la distribution des variables du personas. La modélisation des personas et de leurs variables doit provenir de données en source libre et gratuite. 
+\newline
+
+La modélisation des personas permetteras d'offrir une personnalisation des produits, une meilleur approche des clients ainsi que de mieux cibler le style de communication entre Co-operators et les personas.
+\newline
+
+Le projet sera remis à Co-operators dans le cadre du projet Actulab de l'automne 2017.
+
+\subsection*{Collecte des données}
+Depuis l'essort du \emph{Big Data} et du \emph{deep learning}, de nombreuses base de données sont devenu disponible gratuitement en ligne. Ce mouvement de \emph{démocratisation} des données a aussi été incorporer auprès de nombreuses instances gouvernementale. À cet effet, Statistique Canada, offre l'ensemble des jeux de données des recensements depuis 1991. De plus, de nombreux rapports et jeux de données provinciales sont aussi disponible. Cet accès à un nombre important de données à permis de résoudre la problématique abordée.
+\newline
+
+Parmis les données utilisées on retrouve le recensement canadien \href{http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/download-telecharger/comp/page_dl-tc.cfm?Lang=F}{2016}. Le découpement des données est a déjà été segmenter en RTA par statistique Canada. Cette base de donnée contient de nombreuses variables essentiels à l'analyse. On retrouve en autre, la population par RTA, le nombre de femme et d'homme par RTA, le nombre de personne par tranches de salaire et beaucoup d'autre encore. 
+\newline
+
+Il faut aussi noter que pour des fins de simplification, seulement la province du Québec a été étudier. De plus, une liste réduite de ville a été sélectioner pour représenter cartographiquement les variables sur le territoire. De plus, afin de modeliser la distribution des variables non segmenter par RTA, différentes hypothèses on été retenu. Celles-ci seront discutées plus loin. 
+\newline
+
+Pour soutenir la crédibilité des hypothèses, des publications et des études de différents départements nationaux ou provinciaux on été étudier pour en dégager les grandes tendances. 
+\newline
+
+Tout d'abord, afin de mieux représenter la realité familliale dans la province du Québec le bulletin d'information statistique du ministère de la famille a été utiliser. Le bulletin \href{https://www.mfa.gouv.qc.ca/fr/Famille/chiffres-famille-quebec/bulletin_quelle_famille/Pages/aut2013_no1_tab4.aspx}{\emph{Quelle famille ?}} à permis d'établir le comportement général de la population a l'égard de la colocation. On remarque une plus porte proportion de colocation pour les personnes de plus de 70 ans. C'est différentes proportion de la population habitant en colocation a été utiliser pour déterminer la probabilité d'un résident d'habiter en colocation. Il est à noter que ces données ne sont pas segmenté par RTA.
+\newline
+
+De plus, l'enquête nationale auprès des ménages de \href{http://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/dt-td/Rp-fra.cfm?TABID=2&LANG=F&A=R&APATH=3&DETAIL=0&DIM=0&FL=A&FREE=0&GC=24&GL=-1&GID=1118301&GK=1&GRP=1&O=D&PID=106042&PRID=0&PTYPE=105277&S=0&SHOWALL=0&SUB=0&Temporal=2013&THEME=96&VID=0&VNAMEE=&VNAMEF=&D1=2&D2=0&D3=0&D4=0&D5=0&D6=0}{2011} à permis d'établir les hypothèses sur les professions des québécois Ces différentes données sur l'emploi on permis d'établir la probabilité d'un résident d'occuper une profession quelquonque. Le jeu de donnée ne contient pas le nombre d'étudiant étant donné que les étudiants ne font pas parti de la population active. Afin de déterminer la proportion de la population québécoise étudiantes, le rapport des statistiques de l'enseignement supérieur de \href{http://www.education.gouv.qc.ca/fileadmin/administration/librairies/documents/Ministere/acces_info/Statistiques/Statistiques_ES/Statistiques_enseignement_superieur_2013.pdf}{2013} a été utiliser. Celui-ci à permis d'établir la proportion d'étudiant dans chacun des différents établissements collégiale et universitaire, autrement dit, la région métropolitaine de résidence. De plus, il a permis d'établir la probabilité d'être un étudiant. Il est à noter que ces données ne sont pas segmenté par RTA.
+\newline
+
+Finalement, afin de représenter cartographiquement les prédictions et les variables, les données sur les polygones des régions de tri d'acheminement \href{http://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-fra.cfm}{nationaux} a été utiliser. Il s'agit de la correspondence cartographique des RTA sous forme d'un polynome à multiple côté. Ainsi, il a été possible de représenter dans l'application la distribution. Afin de déterminer les codes postaux des villes étudier, la listes des région de tri \href{https://fr.wikipedia.org/wiki/Liste_des_codes_postaux_canadiens_débutant_par_J}{d'acheminement} a été utiliser. Il s'agit essentiellement des codes postaux par ville ou arrondissement.
+
+
+\subsection*{Traitement des données}
+Avant de débuter la manipulation des données, l'analyse des caractéristiques des personas a permis de ressortir les différents besoins en données ainsi que des possibles manipulations à effectuer. 
+
+\subsubsection*{Caractéristiques des personas}
+On note les caractéristiques suivantes pour les différents profil type :
+
+\subsubsection*{Persona 1}
+\begin{itemize}
+\item[Âge :] entre 16 et 26 ans - (Génération \emph{millenials});
+\item[Salaire annuel :] \numprint{20000} \$
+\item[Occupation :] Étudiant
+\item[Style de vie : ] Célibataire, en colocation et numérique
+\end{itemize}
+
+\subsubsection*{Persona 2}
+\begin{itemize}
+\item[Âge :] entre 32 et 39 ans - (fin de la génération \emph{x} et début de la génération \emph{millenials});
+\item[Occupation :] Professionnel
+\item[Salaire annuel :] \numprint{51000} \$
+\item[Style de vie : ] conjoint de fait/marié, propriétaire et parents
+\end{itemize}
+
+\subsubsection*{Persona 3}
+\begin{itemize}
+\item[Âge :] entre 40 et 52 ans - (Génération \emph{x});
+\item[Occupation :] Travailleur autonome - propriétaire d'une PME
+\item[Salaire annuel :] \numprint{105000} \$
+\item[Style de vie : ] conjoint de fait/marié, propriétaire et parents
+\end{itemize}
+
+\subsubsection*{Persona 4}
+\begin{itemize}
+\item[Âge :] entre 53 et 65 ans - (Génération \emph{baby-boom});
+\item[Occupation :] Professionnel, semi-retraite
+\item[Salaire annuel :] \numprint{50000} \$
+\item[Style de vie : ] marié, propriétaire et parents mature
+\end{itemize}
+
+\subsubsection*{Persona 5}
+\begin{itemize}
+\item[Âge :] entre 66 et 76 an - (Génération \emph{baby-boom});
+\item[Occupation :] Professionnel retraité
+\item[Salaire annuel :] \numprint{43000} \$
+\item[Style de vie : ] marié, propriétaire ou locataire dans une résidence et grand-parents
+\end{itemize}
+\bigskip
+
+Pour l'ensemble des personas, la caractéristique d'âge, de statut civil et de type d'occupation peuvent facilement être extraite du recensement. Par contre, pour les autres variables tel que  des hypothèses et de la simplification a été nécessaire pour obtenir l'information.
+\newline
+
+En ayant les différentes caractéristiques nécessaire à l'analyse, la segmentation des données d'âges, de salaire, de profession et autres a été effectué. Afin de facilité l'utilisation et de diminuer la charge sur l'application, les données découpées à partir des différents jeux de données a été enregistrer dans un nouveau jeu de donnée. 
 
 \section*{Objectifs}
-...
+L'objectifs de ce projet est de répondre aux mandats de Co-operators, soit d'offrir une analyse prédictive de la distribution des personas et d'offrir une application permettant d'observer cette distribution sur le territoire.
 
 \section*{Outils utilisés}
 
+Les différents outils numériques utilisées lors de la résolution de cette problématique sont l'utilisation de statistique R. Ayant une solide formation informatique avec R, l'utilisation de ce langage parait plutôt évidante. Par contre, on note différent avantages notablse de R par rapport aux différentes alternatives tel que Excel/VBA ou Python. Il s'agit de la possibilité de créé une application \emph{Shiny.} Une application \emph{Shiny} correspond à une application écrite en R qui utilise un serveur pour effectuer les calculs, en étant disponible sur une page web. Cet avantage a permis d'écrire  l'application d'analyse statistique disponible avec ce projet. De plus, la grande communauté R et la quantité importante de \emph{package} à aussi permis de traiter les fichiers de polygone cartographique et l'affichage d'une carte dynamique. 
+
 \section*{Méthodologie}
-Indépendance
-test chi square
+Le principal enjeux de ce projet est la validité de la prédiction de la distribution des caractéristiques. Afin de bien représenter celles-ci sur le territoire certaines hypothèses on été nécessaire afin de simplifier le modèle et de permettre la réalisation du mandat.
+\newline
+
+\subsection*{Indépendance des variables}
+Tout d'abord, une hypothèse essentiel est l'indépendance entre les variables. Il s'agit d'une hypothèses courante en modélisation et celle-ci permet de simplifier le modèle. Grâce à cette hypothèse, l'ajout de variable dans le modèle a été beaucoup plus facile à réaliser. En effet, pour prédire le nombre de persona correspondant à une série de caractéristique, on applique le concept suivant :
+\begin{align*}
+f_{\mathbb{X}}(x) &= f_{X_1}(x_1) \times ... \times f_{X_n}(x_n)
+\end{align*}
+Où $\mathbb{X}$ est un vecteur de n variables et $X_i$ est la variables caractéristiques i.
+\newline
+
+Ainsi, si on recherche le nombre d'étudiant de 16 à 26 ans habitant en colocation, on utilise 
+\begin{align*}
+f_{\mathbb{X}}(x) &= f_{X_{\text{Occupation}}}(x) \times f_{X_{\text{Âge}}}(x) \times f_{X_{\text{Colocation}}}(x)
+\end{align*}
+Il devient ainsi beaucoup plus simple de modéliser la fonction conjointe des différentes variables. 
+\newline
+
+
+Étant donner la segmentation originale du recensement, il est possible de valider l'hypothèse. En effet, à l'aide du test de khi-deux, il est possible de vérifier l'hypothèse entre les variables. Par exemple, si on teste avec la population d'homme âgé entre 16 et 26 ans on obtient la \emph{p-value} suivante :
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{chisqTest}\hlopt{$}\hlstd{p.value}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.4189084
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+Autrement dit, le test est non significatif et ne permet pas de rejetter l'hypothèse d'indépendance entre les variables. 
+
+\subsection*{Distribution uniforme sur les intervalles d'âges}
+De plus, une seconde hypothèse importante est la distribution sur les intervalles d'âges. Il a été supposer que sur un intervalle d'âge de $x$ ans à $x + c$ ans, la répartition est distribuer uniformément. Autrement dit, la probabilité d'avoir $x$ ans est la même que d'avoir $x + c$ ans. Cette hypothèse permet d'effectuer une interpolation sur la segmentation du recensement. Les intervalles d'âge n'étant pas ceux recherche, il a ainsi été possible de construire les intervalles d'âges des personas. Cette hypothèse n'a pas été mathématiquement tester mais en considerant une certaine constante dans le taux de natalité, ormis le baby-boom d'après guerre, il est convenable de dire que la distribution est uniforme.
+
+\subsection*{Distribution uniforme des travailleurs}
+Les trois prochaines hypothèses on été les plus difficile à établir et à valider. Elles sont importantes dans l'analyse. N'ayant peu de donnée segmenter sur les travailleurs, il a été difficile de bien capter l'information. En effet, depuis la simplification du formulaire de recensement, le domaine d'occupation n'est pas inclus dans le recensement de 2011 et 2016. Par contre, l'enquête nationale auprès des ménages contient l'information à l'échelle provinciale. Étant donner que l'information a été segmenter en 11 secteur d'occupation, l'hypothèse suivante semblait adéquate. Soit que la distribution des 11 catégories d'occupation est uniformément distribuer dans la province. Autrement dit, la probabilité de retrouver un gestionnaire dans la RTA X1X est la même que dans la RTA X2X. Cela a ainsi permis de capter une partie de l'information sur l'occupation professionel des personas. 
+
+\subsection*{Distribution uniforme des étudiants}
+Toujours dans l'occupation des personas, la distribution de la caractéristique étudiantes n'est pas incluse dans le recensement. En effet, les étudiants ne sont pas compris dans la population active, il devient donc difficile de segmenter l'information jusqu'à la RTA. Pour trouver la proportion des étudiants pour l'ensemble du Québec, la contribution du rapport sur les statistiques de l'enseignement supérieur fut nécessaire. Celui-ci à permis d'établir le nombre d'étudiant qui fréquente un établissement d'enseignement supérieur. En consultant les chiffres on constante qu'environ 50 \% de la population étudiante fréquente un établissement Collégiale de montréal et de 60 \% pour un établissement universitaire. Il devient donc difficile de déterminer la distribution des étudiants en périphérie des établissements scolaire. En supposant que l'étalement urbain autour de cet établissement est exponentiellement décroissante selon la facilité d'accès via le transport en commun et le réseau routier normal. On peu supposer une certaine distribution uniforme des étudiants dans les régions avoisinantes. Il a été ainsi conclu que l'hypothèse de distribution uniforme des étudiants sur le territoire est plaussible et sera utiliser pour le projet. L'analyse d'une piste de solution sur cette variable est abordées plus loin.
+
+\subsection*{Distribution uniforme des colocataires}
+Pour cette dernière hypothèse de distribution, pour les mêmes raisons de disponibilité de l'information ainsi que la difficulté de segmentation. Il était difficile de bien modéliser la variable. Toutefois, à l'aide du bulletin du ministère de la famille, le comportement des québécois en matière de colocation a été étudier. L'étude fait étât d'une variation plus ou moins grande selon l'intervalle d'âge et la région. Étant donner que les intervalles d'âge sont relativement large la distribution uniforme sur la colocation semblait approprié et adéquate. Cette hypothèse à donc été retenue, ce qui permet de simplifier grandement le modèle. 
+
+\subsection*{Retraite à 65 ans}
+Afin de facilité le modèle, l'hypothèse de retraite à la même âge et pour tous a été retenu. En effet, il était difficile de bien modèliser la retraite progressive, la retraite anticipée, la retraite \emph{normale} et la retraite prolongée. Le principale facteur de cette hypothèse a été le facteur temps dans la réalisation du projet. À partir des données disponible sur la retraite de Retraite Québec, la modélisation de cette variable aurait été plus compléte.
+\newline
+
+Pour conclure, les différentes hypothèses retenues ont permis de construire le modèle de façon simple et cohérente à partir des informations disponibles.
 
 \section*{Avantage-Inconvénient}
+Tout modèle n'étant pas parfait, des avantages et inconvénients sont à prendre en considération pour chaqu'un d'eux. Le modèle présenter ici ne fesant pas exception à cette régle, celui-ci entraine de nombreux avantages et de nombreux inconvénients. 
+\newline
 
+Tout d'abord, la simplicité de l'hypothèse d'indépendance permet de facilement et capter une bonne partie de l'information et permet de modéliser les variables. Cette simplicité permet aussi d'ajouter de nombreuses variables aux modèles, il devient ainsi possible de rajouter des variables tels que le bilinguisme, le nombre d'enfants et le type de résidence. Cet avantage est la principale motivation ayant justifier l'hypothèse d'indépendance du modèle.
+\newline
 
+De plus, en supposant la distribution uniforme de certaines variables, il fut possible de modèliser des variables plus difficile à modéliser. Par exemple, la colocation aurait été beaucoup plus difficile à modéliser dans un modèle sans distribution uniforme. 
+\newline
+
+La simplicité globale du modèle a aussi permis la création d'une application web, ce qui permet à toutes les agences du réseaux de consulter en temps réel le modèle. Il ne devient donc plus nécessaire de faire affaire avec un intermédiaire en centre d'expertise. Situation très intéréssante dans un contexte d'affaire.
+\newline
+
+Par contre, l'indépendance entre les variables entraine une perte d'information lorsque le nombre de variable à modéliser devient important. En effet, il devient difficile de bien \emph{supporter} l'hypothèse d'indépendance entre toutes les variables. Cette simplicité de modèle est intéressantes pour les variables déjà présentes dans les données du recensement. Par contre, lorsqu'il s'agit de représenter des variables n'ayant pas été segmenter par RTA, la qualité du modèle peut ne pas être toujours très satisfessante.
+\newline
+
+De plus, l'utilisation de l'application étant intéressante, sont interprétation peut être trompeuse et induire en erreur des décisions d'affaires des différentes agences.
+
+Pour conclure, dans son ensemble le modèle présenter représente bien la réalité de la distribution des personas. L'amélioration du modèle via les différentes pistes de solution discuter plus loin pourrait amener le modèle à mieux prédire la distribution.
+ 
 \section*{Résultats}
 
 \section*{Piste d'amélioration}
+Lors de la présentation des hypothèses retenues, la problématique sur la distribution des étudiants dans les RTA a été soulever. En effet, si on désire améliorer la fiabilité de la prédiction de cette variable, il serait intéressant de créé un modèle plus complexe pour cette variable. En utilisant les données de fréquentations des établissements, de la méthode de transport ainsi que l'établissement d'un zonage en périphérie des établissements. Ce zonage correspondant à la probabilité de retrouver une étudiant dans cette zone. Il serait alors possible d'établir l'étalement urbain des étudiants. Par la suite, en superposant les RTA sur le zonage d'étalement, il serait plus facile d'établir avec précision la distribution des étudiants par RTA. 
+\newline
+
+Une seconde piste d'amélioration serait d'améliorer l'hypothèse d'âge à la retraite. Tel que discuter plus tôt, le facteur temps ayant empêcher l'approfondissement de cette variable, il serait pertinent de corriger cette solution. En effet, de nombreuses données complètes existent sur la retraite. Il aurait été possible de déterminer la distribution de l'âge à la retraite et de déterminer, conjointement avec le recensement, la distribution de la retraite anticipée, de la retraite progressive et de la retraite tardive. Ainsi, la qualité de la prédiction de cette variable serait grandement améliorer.
+
+Une dernière piste d'amélioration du modèle concerne l'ajout de variables, soit l'ajout d'une variable de canaux de communication favoris et de la variable méthode de transport. Cet ajout permettrais d'améliorer le produit offert aux agences. En effet, il serait pertinent de modéliser le canaux de communication favoris des personas, soit numérique, téléphonique et postals. Ainsi, les agences seraient en mesure de mieux cibler la méthode pour contacter les clients potentiels. De plus, la variable de méthode de transport permet d'ajouter la distribution des personas utilisant un véhicule automobile pour se rendre quotidiennement au lieu de travail. Cette variable permettrais de mieux cibler l'offre de produit aux clients potentiels en plus de mieux cibler les offres de rabais de type assurance automobile et habitation.
+
+Pour conclure, en appliquant les pistes de solutions, la qualité de de prédiction du modèle serait grandement améliorer ainsi que la qualité du service offert aux agences. C'est pourquoi, je recommande que l'approfondissement du projet soit considérer pour améliorer la qualité métrique d'estimation et la qualité d'affaire du projet.
 
 \section*{Conclusion}
-
+Pour conclure, blah blah
 
 
 \end{document}
