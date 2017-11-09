@@ -102,9 +102,22 @@ shinyServer(function(input, output) {
           }
           
           #
+          # Variable sexe
+          #
+          if (input$checkGroupSexe == 1){
+               probProduitCumul <- probProduitCumul * dataSetPredict$Pop_female / 
+                    dataSetPredict$Pop
+          } else if (input$checkGroupSexe == 2){
+               probProduitCumul <- probProduitCumul * dataSetPredict$Pop_male / 
+                    dataSetPredict$Pop
+          } else if (input$checkGroupSexe == 3){
+               probProduitCumul <- probProduitCumul * 1 #ensemble population
+          }
+          
+          #
           # Variable âge 
           #
-          if (input$checkGroupSexe == 3 | input$checkGroupSexe == 0){ 
+          if (input$checkGroupSexe == 0){ 
                if (input$selectAge == 1){
                     probProduitCumul <- probProduitCumul * dataSetPredict$Pop_16_26 / 
                          dataSetPredict$Pop
@@ -120,7 +133,14 @@ shinyServer(function(input, output) {
                } else if (input$selectAge == 5){
                     probProduitCumul <- probProduitCumul * dataSetPredict$Pop_66_76 / 
                          dataSetPredict$Pop
-               }
+               } else if (input$selectAge == 6){
+                    probProduitCumul <- probProduitCumul * (dataSetPredict$Pop_16_26 + 
+                                                                 dataSetPredict$Pop_32_39 + 
+                                                                 dataSetPredict$Pop_40_52 + 
+                                                                 dataSetPredict$Pop_53_65 + 
+                                                                 dataSetPredict$Pop_66_76) / 
+                         dataSetPredict$Pop
+               } 
           }
           #
           # Variable type d'occupation
@@ -213,12 +233,29 @@ shinyServer(function(input, output) {
                if (length(probProduitCumul) > 1){
                     #Calcul de la prédiction
                     prediction <- round(probProduitCumul * dataSetPredict$Pop)
-                    # Descriptiosn du popup de la carte
+                    if (length(unique(prediction)) == 1){
+                         descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
+                                               "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
+                                               "<b>Prédiction :</b>", prediction,"<br>",
+                                               "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
+                         leaflet(FSA.shapeCity) %>% addTiles() %>%
+                              addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
+                                          opacity = 1.0, fillOpacity = 0.5,
+                                          fillColor = "White",
+                                          highlightOptions = highlightOptions(color = "Black", weight = 2,
+                                                                              bringToFront = TRUE),
+                                          label = descriptions,
+                                          labelOptions = labelOptions( 
+                                               style = list("front-weight" = "normal", padding = "3px 8px"), 
+                                               textsize = '15px', 
+                                               direction = 'auto' 
+                                          )) 
+                    } else {
+                                             # Descriptiosn du popup de la carte
                     descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
                                           "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
                                           "<b>Prédiction :</b>", prediction,"<br>",
                                           "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
-                    
                     leaflet(FSA.shapeCity) %>% addTiles() %>%
                          addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
                                      opacity = 1.0, fillOpacity = 0.5,
@@ -230,46 +267,21 @@ shinyServer(function(input, output) {
                                           style = list("front-weight" = "normal", padding = "3px 8px"), 
                                           textsize = '15px', 
                                           direction = 'auto' 
-                                     )) 
-                    
-                    
-               } else if (probProduitCumul != 1){
+                                     ))
+                    }
+               } else {
                     #Calcul de la prédiction
                     prediction <- round(probProduitCumul * dataSetPredict$Pop)
                     # Descriptiosn du popup de la carte
-                    # Descriptiosn du popup de la carte
                     descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
                                           "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
                                           "<b>Prédiction :</b>", prediction,"<br>",
                                           "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
-                    
-                    
                     leaflet(FSA.shapeCity) %>% addTiles() %>%
                          addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
                                      opacity = 1.0, fillOpacity = 0.5,
                                      fillColor = ~colorQuantile("OrRd", unique(prediction))(prediction),
                                      highlightOptions = highlightOptions(color = "white", weight = 2,
-                                                                         bringToFront = TRUE),
-                                     label = descriptions,
-                                     labelOptions = labelOptions( 
-                                          style = list("front-weight" = "normal", padding = "3px 8px"), 
-                                          textsize = '15px', 
-                                          direction = 'auto' 
-                                     )) 
-               } else {
-                    prediction <- probProduitCumul * 0
-                    # Descriptiosn du popup de la carte
-                    descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
-                                          "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
-                                          "<b>Prédiction :</b>", prediction,"<br>",
-                                          "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
-                    
-                    
-                    leaflet(FSA.shapeCity) %>% addTiles() %>%
-                         addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
-                                     opacity = 0.5, fillOpacity = 1,
-                                     fillColor = "White",
-                                     highlightOptions = highlightOptions(color = "black", weight = 2,
                                                                          bringToFront = TRUE),
                                      label = descriptions,
                                      labelOptions = labelOptions( 
@@ -359,8 +371,6 @@ shinyServer(function(input, output) {
                                      textsize = '15px', 
                                      direction = 'auto' 
                                 ))
-               
           }
-          
      }) #mapPersona
 })
