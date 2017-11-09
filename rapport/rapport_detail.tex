@@ -184,7 +184,7 @@ Pour utiliser l'application, il suffit d'accéder à la page web et de sélectio
 \end{moreInfo}
 
 \section*{Résultat sommaire}
-.....
+La distribution du persona 1 et du persona 5 peuvent être ajustées selon des loi normale. Par contre, pour les trois autres personas, le modèle ne permet pas d'ajuster à une loi de distribution connue. On peut consulter les prédictions des personas plus loin dans le rapport.
 
 \section*{Code source}
 Il est possible de consulter l'ensemble du code source et les données utilisées pour le projet à partir de la \href{https://davebulaval.github.io/Actulab_COOP/}{page web} du dépôt \href{https://github.com/davebulaval/Actulab_COOP}{\emph{GitHub}}.
@@ -242,6 +242,7 @@ Avant de débuter la manipulation des données, l'analyse des caractéristiques 
 On note les caractéristiques suivantes pour les différents profil type :
 
 \subsubsection*{Persona 1}
+\label{per1}
 \begin{itemize}
 \item[Âge :] entre 16 et 26 ans - (Génération \emph{millenials});
 \item[Salaire annuel :] \numprint{20000} \$
@@ -250,6 +251,7 @@ On note les caractéristiques suivantes pour les différents profil type :
 \end{itemize}
 
 \subsubsection*{Persona 2}
+\label{per2}
 \begin{itemize}
 \item[Âge :] entre 32 et 39 ans - (fin de la génération \emph{x} et début de la génération \emph{millenials});
 \item[Occupation :] Professionnel
@@ -258,6 +260,7 @@ On note les caractéristiques suivantes pour les différents profil type :
 \end{itemize}
 
 \subsubsection*{Persona 3}
+\label{per3}
 \begin{itemize}
 \item[Âge :] entre 40 et 52 ans - (Génération \emph{x});
 \item[Occupation :] Travailleur autonome - propriétaire d'une PME
@@ -266,6 +269,7 @@ On note les caractéristiques suivantes pour les différents profil type :
 \end{itemize}
 
 \subsubsection*{Persona 4}
+\label{per4}
 \begin{itemize}
 \item[Âge :] entre 53 et 65 ans - (Génération \emph{baby-boom});
 \item[Occupation :] Professionnel, semi-retraite
@@ -274,6 +278,7 @@ On note les caractéristiques suivantes pour les différents profil type :
 \end{itemize}
 
 \subsubsection*{Persona 5}
+\label{per5}
 \begin{itemize}
 \item[Âge :] entre 66 et 76 an - (Génération \emph{baby-boom});
 \item[Occupation :] Professionnel retraité
@@ -366,6 +371,493 @@ De plus, l'utilisation de l'application étant intéressante, sont interprétati
 Pour conclure, dans son ensemble le modèle présenter représente bien la réalité de la distribution des personas. L'amélioration du modèle via les différentes pistes de solution discuter plus loin pourrait amener le modèle à mieux prédire la distribution.
  
 \section*{Résultats}
+Pour des fins de simplification seulement la région de Laval sera étudier pour l'analyse des résultats. Cette analyse sera divisé par persona, afin de bien comprendre leur distribution.
+Tout d'abord, si on effectue une analyse pour l'ensemble de la province, on remarque les tendances macro-provinciales suivantes :
+
+\begin{itemize}
+\item Moyenne de population par RTA : \numprint{19848}
+\item Maximum de population par RTA : \numprint{139125}
+\item Minimum de population par RTA : \numprint{560}
+\end{itemize}
+
+\subsection*{Jacob}
+Le persona de Jacob possède les caractéristiques suivantes : 
+\begin{itemize}
+\item 20 ans;
+\item\numprint{20000} \$;
+\item étudiant.
+\end{itemize}
+La fonction de prédiction correspond à
+
+\begin{align*}
+f_{\mathbb{X}}(x) &= f_{X_{\text{Occupation}}}(\text{Étudiant}) \times f_{X_{\text{Âge}}}(\text{16-26}) \times f_{X_{\text{salaire}}}(\text{\numprint{20000} - \numprint{30000}})
+\end{align*}
+
+Ce qui nous permet de trouver le tableau de valeur suivant :
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## # A tibble: 19 x 5
+##       X1 Prediction `Pop homme 16_26` `Pop etudiante` Salaire
+##    <chr>      <int>             <int>           <dbl>   <int>
+##  1   H7A         12              1477      0.06286751    2660
+##  2   H7B          1               191      0.06286751     370
+##  3   H7C          4               533      0.06286751    1165
+##  4   H7E         15              1891      0.06286751    3330
+##  5   H7G         13              1373      0.06286751    3180
+##  6   H7H          7               964      0.06286751    1620
+##  7   H7J          1               125      0.06286751     325
+##  8   H7K         13              1686      0.06286751    2735
+##  9   H7L         16              2518      0.06286751    3735
+## 10   H7M         18              1978      0.06286751    4060
+## 11   H7N         32              3027      0.06286751    7065
+## 12   H7P         20              2388      0.06286751    4635
+## 13   H7R         16              1962      0.06286751    3880
+## 14   H7S          6               545      0.06286751    1230
+## 15   H7T         15              1582      0.06286751    3750
+## 16   H7V         16              1303      0.06286751    4440
+## 17   H7W         32              2630      0.06286751    8130
+## 18   H7X         14              1823      0.06286751    3200
+## 19   H7Y          3               615      0.06286751     875
+## [1] 13
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+On remarque que la moyenne correspond à 13 pour l'ensemble du territoire de l'ile de Laval. Le résultat est cohérent avec les données initiales du recensement. En effet,
+selon les données de Statistique Canada, il y a en moyenne 1506 hommes âgés entre 16 et 26 ans par région de tri d'acheminement. De plus, la proportion d'étudiant est de $6.286751 \%$ pour l'ensemble des RTA. Ce qui donne en moyenne 95 hommes âgés entre 16 et 26 ans et qui son étudiant par RTA. En ajoutant cette dernière variable de salaire, on réduit encore plus notre échantillon de la population qui correspond aux variables. \newline
+
+On note que l'hypothèse d'indépendance entre la variable population âgé entre 16 et 26 ans et la variable occupation étudiante est difficile à ne pas remettre en doute. Toutefois, tel que mentioner plus haut, celle-ci permet de simplifier le modèle. Il est possible de consulter la distribution des \emph{Jacob} à l'aide de l'application.
+
+\subsubsection*{Analyse des graphiques de distribution}
+
+On présente les graphiques de l'ajustement des données des régions de tri d'acheminement de Laval sur les trois lois suivantes, Normale, Gamma et LogNormale.
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{estimate} \hlcom{#mu}
+\end{alltt}
+\begin{verbatim}
+##      mean        sd 
+## 13.368421  8.536057
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{sd} \hlcom{#sigma}
+\end{alltt}
+\begin{verbatim}
+##     mean       sd 
+## 1.958306 1.384731
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.normal)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-5-1} 
+
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.gamma}\hlopt{$}\hlstd{estimate} \hlcom{#alpha}
+\end{alltt}
+\begin{verbatim}
+##     shape      rate 
+## 1.6708800 0.1249822
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.gamma}\hlopt{$}\hlstd{sd} \hlcom{#beta}
+\end{alltt}
+\begin{verbatim}
+##      shape       rate 
+## 0.49735268 0.04330907
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.gamma)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-6-1} 
+
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.lognormal}\hlopt{$}\hlstd{estimate} \hlcom{#mu}
+\end{alltt}
+\begin{verbatim}
+##   meanlog     sdlog 
+## 2.2646253 0.9749802
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.lognormal}\hlopt{$}\hlstd{sd} \hlcom{#sigma}
+\end{alltt}
+\begin{verbatim}
+##   meanlog     sdlog 
+## 0.2236758 0.1581619
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.lognormal)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-7-1} 
+
+\end{knitrout}
+
+En observant les graphes Q-Q plot, on peut déduire que la loi Normale est la loi qui semble le mieux représenter la fonction de densité empirique. 
+
+On en conclut que, la distribution des \emph{Jacob} sur le territoire Lavallois suis une loi Normale avec paramètre $\mu = 13.368421, \sigma = 1.958306$.
+
+\subsection*{Maria}
+Le persona de Maria possède les caractéristiques suivantes : 
+\begin{itemize}
+\item 35 ans;
+\item\numprint{51000} \$;
+\item Comptable.
+\end{itemize}
+La fonction de prédiction correspond à
+\begin{align*}
+f_{\mathbb{X}}(x) &= f_{X_{\text{Occupation}}}(\text{Professionnel}) \times f_{X_{\text{Âge}}}(\text{32-39}) \times f_{X_{\text{salaire}}}(\text{\numprint{50000} - \numprint{60000}})
+\end{align*}
+
+Ce qui nous permet de trouver le tableau de valeur suivant :
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## # A tibble: 19 x 5
+##       X1 Prediction `Pop femme 32_39` `Pop service` Salaire
+##    <chr>      <int>             <int>         <dbl>   <int>
+##  1   H7A          3              1214    0.01375016    1445
+##  2   H7B          0               169    0.01375016     205
+##  3   H7C          1               422    0.01375016     470
+##  4   H7E          3              1081    0.01375016    1965
+##  5   H7G          2              1035    0.01375016    1150
+##  6   H7H          2               811    0.01375016    1130
+##  7   H7J          0               107    0.01375016     170
+##  8   H7K          3              1016    0.01375016    1685
+##  9   H7L          6              2053    0.01375016    2875
+## 10   H7M          3              1193    0.01375016    1770
+## 11   H7N          5              2472    0.01375016    2205
+## 12   H7P          5              1793    0.01375016    2395
+## 13   H7R          4              1659    0.01375016    2065
+## 14   H7S          1               381    0.01375016     385
+## 15   H7T          3              1338    0.01375016    1440
+## 16   H7V          1              1039    0.01375016     760
+## 17   H7W          3              2029    0.01375016    1900
+## 18   H7X          3              1362    0.01375016    1755
+## 19   H7Y          2               551    0.01375016     725
+## [1] 3
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+On remarque que la moyenne correspond à 3 pour l'ensemble du territoire de l'ile de Laval. Autrement dit, il y a en moyenne une femme âgé entre 32 et 39 ans qui est comptable et qui fait entre \numprint{50000}\$ et \numprint{60000} \$ par année. Le résultat est cohérent avec les données initiales du recensement. En effet, selon les données de Statistique Canada, il y a en moyenne 1143 femmes âgées entre 32 et 39 ans par région de tri d'acheminement. De plus, il n'y a qu'en moyenne 1394 Lavalois par RTA qui on un salaire annuel dans la même tranche que Maria. Autrement dit, en moyenne 72 femmes âgées entre 32 et 39 ans on un salaire annuel entre \numprint{50000}\$ et \numprint{60000} \$ par année. N'ayant pas réussis à trouver des données segmenter par type de profession aussi précise que comptable, il a été déduit que la profession de comptable se retrouve dans les catégories suivantes : Gestion, affaires, finance et service. Ce qui à permis de déterminer la proportion de comptable à $3.735033 \%$. On obtient ainsi la distribution illustré précédament. \newline
+
+\subsubsection*{Analyse des graphiques de distribution}
+
+On présente les graphiques de l'ajustement des données des régions de tri d'acheminement de Laval sur la loi Normale \footnote{Il a été impossible d'ajuster d'autre loi sur les données.}.
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{estimate} \hlcom{#mu}
+\end{alltt}
+\begin{verbatim}
+##     mean       sd 
+## 2.631579 1.596395
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{sd} \hlcom{#sigma}
+\end{alltt}
+\begin{verbatim}
+##      mean        sd 
+## 0.3662381 0.2589690
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.normal)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-10-1} 
+
+\end{knitrout}
+
+En observant les graphes Q-Q plot, on peut déduire que la loi Normale n'est pas une loi approprié pour représenter la fonction de densité empirique. Il semblerait que la qualité des données sur l'occupation et l'hypothèse de distribution n'est pas adéquate et nécessiterais une amélioration. Une piste de solution est abordée plus loin.
+
+On en conclut que la distribution n'est pas ajustable sur une loi Normale.
+
+\subsection*{David}
+Le persona de Maria possède les caractéristiques suivantes : 
+\begin{itemize}
+\item 45 ans;
+\item\numprint{105000} \$;
+\item PME.
+\end{itemize}
+La fonction de prédiction correspond à
+\begin{align*}
+f_{\mathbb{X}}(x) &= f_{X_{\text{Occupation}}}(\text{PME}) \times f_{X_{\text{Âge}}}(\text{40-52}) \times f_{X_{\text{salaire}}}(\text{\numprint{100000} et +})
+\end{align*}
+
+Ce qui nous permet de trouver le tableau de valeur suivant :
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## # A tibble: 19 x 5
+##       X1 Prediction `Pop homme 40_52`  `Pop PME` Salaire
+##    <chr>      <int>             <int>      <dbl>   <int>
+##  1   H7A          0              2010 0.04799292      90
+##  2   H7B          0               293 0.04799292      20
+##  3   H7C          0               962 0.04799292      40
+##  4   H7E          1              2471 0.04799292     295
+##  5   H7G          0              1678 0.04799292     130
+##  6   H7H          0              1392 0.04799292     100
+##  7   H7J          0               200 0.04799292      20
+##  8   H7K          1              2188 0.04799292     220
+##  9   H7L          2              3904 0.04799292     395
+## 10   H7M          1              2185 0.04799292     190
+## 11   H7N          1              3466 0.04799292     165
+## 12   H7P          1              3468 0.04799292     265
+## 13   H7R          1              3146 0.04799292     210
+## 14   H7S          0               635 0.04799292      30
+## 15   H7T          1              2151 0.04799292     180
+## 16   H7V          0              1749 0.04799292      45
+## 17   H7W          1              3448 0.04799292     210
+## 18   H7X          2              2906 0.04799292     310
+## 19   H7Y          1              1178 0.04799292     190
+## [1] 1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+On remarque que la moyenne correspond à 1 pour l'ensemble du territoire de l'ile de Laval. Autrement dit, il y a en moyenne un homme âgé entre 40 et 52 ans qui est propriétaire d'une PME et qui fait plus de \numprint{100000} \$ par année. Le résultat est cohérent avec les données initiales du recensement. En effet, selon les données de Statistique Canada, il y a en moyenne 2075 homme âgés entre 40 et 52 ans par région de tri d'acheminement. De plus, il n'y a qu'en moyenne 163 lavalois qui font plus de \numprint{100000} \$ par année. Autrement dit, en moyenne seulement 43 hommes lavalois qui correspond au deux premières caractéristiques. N'ayant pas réussis à trouver des données segmenter par type de profession aussi précise que propriétaire de PME, il a été déduit que cette profession se retrouve dans les catégories suivantes : Gestion,  affaires et finance. Ce qui à permis d'établir que la proportion de propriétaire de PME est de $4.799292 \%$. La distribution prédite est donc cohérente avec les données observées.
+
+\subsubsection*{Analyse des graphiques de distribution}
+
+On présente les graphiques de l'ajustement des données des régions de tri d'acheminement de Laval sur la loi Normale\footnote{Il a été impossible d'ajuster d'autre loi sur les données.}.
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{estimate} \hlcom{#mu}
+\end{alltt}
+\begin{verbatim}
+##      mean        sd 
+## 0.6842105 0.6531407
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{sd} \hlcom{#sigma}
+\end{alltt}
+\begin{verbatim}
+##      mean        sd 
+## 0.1498408 0.1059523
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.normal)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-13-1} 
+
+\end{knitrout}
+
+En observant les graphes Q-Q plot, on peut déduire que la loi Normale n'est pas une loi approprié pour représenter la fonction de densité empirique. On suppose la même problématique soulevé lors de l'analyse de Maria.
+
+\subsection*{Claire}
+Le persona de Claire possède les caractéristiques suivantes : 
+\begin{itemize}
+\item 61 ans;
+\item\numprint{50000} \$;
+\item enseignante.
+\end{itemize}
+La fonction de prédiction correspond à
+\begin{align*}
+f_{\mathbb{X}}(x) &= f_{X_{\text{Occupation}}}(\text{enseignante}) \times f_{X_{\text{Âge}}}(\text{53 - 65}) \times f_{X_{\text{salaire}}}(\text{\numprint{50000} - \numprint{60000}})
+\end{align*}
+
+Ce qui nous permet de trouver le tableau de valeur suivant :
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## # A tibble: 19 x 5
+##       X1 Prediction `Pop femme 53_65` `Pop enseign` Salaire
+##    <chr>      <int>             <int>         <dbl>   <int>
+##  1   H7A          1              1854    0.01046631    1445
+##  2   H7B          0               283    0.01046631     205
+##  3   H7C          0               730    0.01046631     470
+##  4   H7E          2              2468    0.01046631    1965
+##  5   H7G          1              1888    0.01046631    1150
+##  6   H7H          1              1238    0.01046631    1130
+##  7   H7J          0               270    0.01046631     170
+##  8   H7K          2              2278    0.01046631    1685
+##  9   H7L          3              3131    0.01046631    2875
+## 10   H7M          2              2991    0.01046631    1770
+## 11   H7N          2              3645    0.01046631    2205
+## 12   H7P          2              3275    0.01046631    2395
+## 13   H7R          2              2583    0.01046631    2065
+## 14   H7S          0               611    0.01046631     385
+## 15   H7T          1              2185    0.01046631    1440
+## 16   H7V          1              1851    0.01046631     760
+## 17   H7W          2              3591    0.01046631    1900
+## 18   H7X          1              2047    0.01046631    1755
+## 19   H7Y          1               771    0.01046631     725
+## [1] 1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+On remarque que la moyenne correspond à 1 pour l'ensemble du territoire de l'ile de Laval. Autrement dit, il y a en moyenne une femme âgé entre 53 et 65 ans qui est enseignante et qui fait entre \numprint{50000}\$ et \numprint{60000} \$  par année. Le résultat est cohérent avec les données initiales du recensement. En effet, selon les données de Statistique Canada, il y a en moyenne 1986 femmes âgées entre 53 et 65 ans par région de tri d'acheminement. De plus, il n'y a en moyenne 1394 lavalois qui font plus entre  \numprint{50000}\$ et \numprint{60000} \$  par année. Autrement dit, en moyenne seulement 124 femmes lavaloises qui correspond au deux premières caractéristiques. De plus, seulement $1.0466$\% des québécois sont dans l'enseignement. 
+
+\subsubsection*{Analyse des graphiques de distribution}
+
+On présente les graphiques de l'ajustement des données des régions de tri d'acheminement de Laval sur la loi Normale\footnote{Il a été impossible d'ajuster d'autre loi sur les données.}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{estimate} \hlcom{#mu}
+\end{alltt}
+\begin{verbatim}
+##      mean        sd 
+## 1.2631579 0.8486587
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{sd} \hlcom{#sigma}
+\end{alltt}
+\begin{verbatim}
+##      mean        sd 
+## 0.1946957 0.1376698
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.normal)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-16-1} 
+
+\end{knitrout}
+
+En observant les graphes Q-Q plot, on peut déduire que la loi Normale n'est pas une loi approprié pour représenter la fonction de densité empirique. On suppose la même problématique soulevé lors de l'analyse de Maria.
+
+\subsection*{Daniel}
+Le persona de Daniel possède les caractéristiques suivantes : 
+\begin{itemize}
+\item 71 ans;
+\item\numprint{43000} \$;
+\item retraité.
+\end{itemize}
+La fonction de prédiction correspond à
+\begin{align*}
+f_{\mathbb{X}}(x) &= f_{X_{\text{Occupation}}}(\text{retraité}) \times f_{X_{\text{Âge}}}(\text{66 - 76}) \times f_{X_{\text{salaire}}}(\text{\numprint{40000} - \numprint{50000}})
+\end{align*}
+
+Ce qui nous permet de trouver le tableau de valeur suivant :
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## # A tibble: 19 x 5
+##       X1 Prediction `Pop homme 66_76` `Pop retraite` Salaire
+##    <chr>      <int>             <int>          <dbl>   <int>
+##  1   H7A         84               757   1.225865e-07    2325
+##  2   H7B         16               131   1.225865e-07     380
+##  3   H7C         39               426   1.225865e-07     830
+##  4   H7E        129              1292   1.225865e-07    2640
+##  5   H7G         87               975   1.225865e-07    1895
+##  6   H7H         52               449   1.225865e-07    1590
+##  7   H7J         13               128   1.225865e-07     225
+##  8   H7K         85               833   1.225865e-07    2260
+##  9   H7L        108              1094   1.225865e-07    3685
+## 10   H7M        140              1434   1.225865e-07    2715
+## 11   H7N        159              1725   1.225865e-07    3900
+## 12   H7P        164              1577   1.225865e-07    3640
+## 13   H7R        116              1124   1.225865e-07    3095
+## 14   H7S         29               315   1.225865e-07     665
+## 15   H7T        105              1121   1.225865e-07    2255
+## 16   H7V         71              1081   1.225865e-07    1485
+## 17   H7W        188              2363   1.225865e-07    3305
+## 18   H7X         81               923   1.225865e-07    2285
+## 19   H7Y         23               245   1.225865e-07     905
+## [1] 89
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+On remarque que la moyenne correspond à 89 pour l'ensemble du territoire de l'ile de Laval. Autrement dit, il y a en moyenne 89 hommes âgés entre 66 et 76 ans qui sont à la retraite et qui font entre \numprint{40000}\$ et \numprint{50000} \$  par année. Le résultat est cohérent avec les données initiales du recensement. En effet, selon les données de Statistique Canada, il y a en moyenne 947 hommes âgés entre 66 et 76 ans par région de tri d'acheminement. De plus, il n'y a en moyenne 2109 lavalois qui font plus entre  \numprint{40000}\$ et \numprint{50000} \$  par année. Autrement dit, en moyenne 89 hommes lavalois qui correspond au deux premières caractéristiques. Ce qui est cohérent car il a été supposé que toutes personnes de plus 65 ans est automatiquement à la retraite. De plus, on rappel qu'avec la retraite de la génération \emph{baby-boomer} une grande portion de la population est à la retraite.
+
+\subsubsection*{Analyse des graphiques de distribution}
+
+On présente les graphiques de l'ajustement des données des régions de tri d'acheminement de Laval sur les trois lois suivantes, Normale, Gamma et LogNormale.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{estimate} \hlcom{#mu}
+\end{alltt}
+\begin{verbatim}
+##     mean       sd 
+## 88.89474 50.90538
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.normal}\hlopt{$}\hlstd{sd} \hlcom{#sigma}
+\end{alltt}
+\begin{verbatim}
+##      mean        sd 
+## 11.678494  8.257943
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.normal)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-19-1} 
+
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.gamma}\hlopt{$}\hlstd{estimate} \hlcom{#alpha}
+\end{alltt}
+\begin{verbatim}
+##      shape       rate 
+## 2.25687826 0.02538995
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.gamma}\hlopt{$}\hlstd{sd} \hlcom{#beta}
+\end{alltt}
+\begin{verbatim}
+##       shape        rate 
+## 0.682239619 0.008578526
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.gamma)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-20-1} 
+
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{fit.lognormal}\hlopt{$}\hlstd{estimate} \hlcom{#mu}
+\end{alltt}
+\begin{verbatim}
+##   meanlog     sdlog 
+## 4.2498941 0.7757426
+\end{verbatim}
+\begin{alltt}
+\hlstd{fit.lognormal}\hlopt{$}\hlstd{sd} \hlcom{#sigma}
+\end{alltt}
+\begin{verbatim}
+##   meanlog     sdlog 
+## 0.1779676 0.1258411
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(fit.lognormal)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-21-1} 
+
+\end{knitrout}
+
+En observant les graphes Q-Q plot, on peut déduire que la loi Normale est la loi qui semble le mieux représenter la fonction de densité empirique. 
+
+On en conclut que, la distribution des \emph{Daniel} sur le territoire Lavallois suis une loi Normale avec paramètre $\mu = 88.89474, \sigma = 11.678494$.
 
 \section*{Piste d'amélioration}
 Lors de la présentation des hypothèses retenues, la problématique sur la distribution des étudiants dans les RTA a été soulever. En effet, si on désire améliorer la fiabilité de la prédiction de cette variable, il serait intéressant de créé un modèle plus complexe pour cette variable. En utilisant les données de fréquentations des établissements, de la méthode de transport ainsi que l'établissement d'un zonage en périphérie des établissements. Ce zonage correspondant à la probabilité de retrouver une étudiant dans cette zone. Il serait alors possible d'établir l'étalement urbain des étudiants. Par la suite, en superposant les RTA sur le zonage d'étalement, il serait plus facile d'établir avec précision la distribution des étudiants par RTA. 
@@ -373,12 +865,16 @@ Lors de la présentation des hypothèses retenues, la problématique sur la dist
 
 Une seconde piste d'amélioration serait d'améliorer l'hypothèse d'âge à la retraite. Tel que discuter plus tôt, le facteur temps ayant empêcher l'approfondissement de cette variable, il serait pertinent de corriger cette solution. En effet, de nombreuses données complètes existent sur la retraite. Il aurait été possible de déterminer la distribution de l'âge à la retraite et de déterminer, conjointement avec le recensement, la distribution de la retraite anticipée, de la retraite progressive et de la retraite tardive. Ainsi, la qualité de la prédiction de cette variable serait grandement améliorer.
 
+Une troisième piste d'amélioration a été observer lors de l'analyse des résultats, l'hypothèse initiale de distribution uniforme des occupations ne semble pas être adéquate, on remarque pour la plupart des personas, cette hypothèse fait perdre beaucoup de précision au modèle. De plus, la faible segmentation des données nuis aussi grandement à la capacité du modèle de capter l'information réelle. La recherche de donnée plus complète serait à considerer pour améliorer l'efficacité du modèle.
+
 Une dernière piste d'amélioration du modèle concerne l'ajout de variables, soit l'ajout d'une variable de canaux de communication favoris et de la variable méthode de transport. Cet ajout permettrais d'améliorer le produit offert aux agences. En effet, il serait pertinent de modéliser le canaux de communication favoris des personas, soit numérique, téléphonique et postals. Ainsi, les agences seraient en mesure de mieux cibler la méthode pour contacter les clients potentiels. De plus, la variable de méthode de transport permet d'ajouter la distribution des personas utilisant un véhicule automobile pour se rendre quotidiennement au lieu de travail. Cette variable permettrais de mieux cibler l'offre de produit aux clients potentiels en plus de mieux cibler les offres de rabais de type assurance automobile et habitation.
 
 Pour conclure, en appliquant les pistes de solutions, la qualité de de prédiction du modèle serait grandement améliorer ainsi que la qualité du service offert aux agences. C'est pourquoi, je recommande que l'approfondissement du projet soit considérer pour améliorer la qualité métrique d'estimation et la qualité d'affaire du projet.
 
 \section*{Conclusion}
-Pour conclure, blah blah
+Pour conclure, le modèle présenter dans ce projet permet de modèliser de nombreuses variables différentes. Certaines de c'est variables peuvent être jointe ensemble afin de représenter différent persona. Par contre, on a bien démontrer que certaine hypothèse et données ne semble pas concluante pour prédire la distribution des occupations des personas. La principale faiblesse du modèle réside dans cette variable. Malgré tout, le modèle semble concluant dans la représentation de la distribution des personas. 
+
+...
 
 
 \end{document}

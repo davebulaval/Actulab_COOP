@@ -15,7 +15,4 @@ dataEducation <- read_csv("DatasetModif/dataEducation.csv",
                           col_types = cols(X1 = col_skip()))
 dataEmploi <- read_csv("DatasetModif/dataEmploi.csv", 
                        col_types = cols(X1 = col_skip()))
-dataEmploi_female <- read_csv("DatasetModif/dataEmploi_female.csv", 
-                              col_types = cols(X1 = col_skip()))
-dataEmploi_male <- read_csv("DatasetModif/dataEmploi_male.csv", 
-                            col_types = cols(X1 = col_skip()))
+

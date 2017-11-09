@@ -14,7 +14,6 @@ source( "load_data.R" )
 
 shinyServer(function(input, output) {
      
-     #      probProduitCumul <- 1
      output$map <- renderLeaflet({
           probProduitCumul <- 1
           if(input$selectRegion == 1){
@@ -48,96 +47,30 @@ shinyServer(function(input, output) {
           }
           
           #
-          # Variable salaire et sexe-salaire
+          # Variable salaire
           #
           if(input$selectRevenu == 1){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_1_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_1_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_1 / dataSetPredict$Pop)
-               } 
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_1 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 2){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_2_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_2_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_2 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_2 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 3){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_3_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_3_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_3 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_3 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 4){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_4_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_4_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_4 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_4 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 5){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_5_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_5_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_5 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_5 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 6){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_6_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_6_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_6 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_6 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 7){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_7_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_7_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_7 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_7 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 8){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_8_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_8_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_8 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_8 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 9){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_9_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_9_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_9 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_9 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 10){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_10_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_10_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_10 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_10 / dataSetPredict$Pop)
           } else if (input$selectRevenu == 11){
-               if(input$checkGroupSexe == 1){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_11_f / dataSetPredict$Pop)
-               } else if (input$checkGroupSexe == 2){
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_11_m / dataSetPredict$Pop)
-               } else {
-                    probProduitCumul <- probProduitCumul * (dataSetPredict$sal_11 / dataSetPredict$Pop)
-               }
+               probProduitCumul <- probProduitCumul * (dataSetPredict$sal_11 / dataSetPredict$Pop)
           }
           
           #
@@ -145,96 +78,33 @@ shinyServer(function(input, output) {
           #
           
           if(input$selectOccupation == 1){ #étudiant
-               if(input$selectRegion == 1){
-                    probProduitCumul <- probProduitCumul * 
-                         ((dataEducation[1,10] + dataEducation[4,10]) / sum(dataSetPredict$Pop))[[1]]
-               } else if (input$selectRegion == 2) {
-                    probProduitCumul <- probProduitCumul * 
-                         ((dataEducation[1,10] + dataEducation[4,10]) / sum(dataSetPredict$Pop))[[1]]
-               } else if (input$selectRegion == 3) {
-                    probProduitCumul <- probProduitCumul * 
-                         ((dataEducation[1,10] + dataEducation[4,10]) / sum(dataSetPredict$Pop))[[1]]
-               } else if (input$selectRegion == 4) {
-                    probProduitCumul <- probProduitCumul * 
-                         ((dataEducation[1,10] + dataEducation[4,10]) / sum(dataSetPredict$Pop))[[1]]
-               }
+               probProduitCumul <- probProduitCumul * 
+                    ((dataEducation[1,10] + dataEducation[4,10]) / sum(dataSetPredict$Pop))[[1]]
           } else if (input$selectOccupation > 1){ 
-               if (input$checkGroupSexe == 1) { #Femme
-                    if(input$selectAge > 0){
-                         probProduitCumul <- probProduitCumul * 
-                             ( dataEmploi_female[as.numeric(input$selectOccupation), 
-                                                as.numeric(input$selectAge)] / 
-                              sum(dataSetPredict$Pop))[[1]]
+               if (input$selectOccupation == 12){
+                    if(input$selectAge == 5){
+                         probProduitCumul <- probProduitCumul * 1 # retraite ""obligatoire"" à + 65 ans. Voir hypothèses
                     } else {
-                         probProduitCumul <- probProduitCumul * 
-                              ( sum(dataEmploi_female[as.numeric(input$selectOccupation),]) / 
-                              sum(dataSetPredict$Pop))[[1]]
+                         probProduitCumul <- probProduitCumul * 0 # Aucune retraite avant 65 ans
                     }
-               } else if (input$checkGroupSexe == 2) { #Homme
-                    if(input$selectAge > 0){
-                         probProduitCumul <- probProduitCumul * 
-                              ( dataEmploi_male[as.numeric(input$selectOccupation), 
-                                              as.numeric(input$selectAge)] /
-                              sum(dataSetPredict$Pop))[[1]]
-                    } else {
-                         probProduitCumul <- probProduitCumul * 
-                              ( sum(dataEmploi_male[as.numeric(input$selectOccupation),]) /
-                              sum(dataSetPredict$Pop))[[1]]
-                    }
-                    
-               } else { #Total
+               } else {
                     if(input$selectAge > 0){
                          probProduitCumul <- probProduitCumul * 
                               ( dataEmploi[as.numeric(input$selectOccupation), 
-                                         as.numeric(input$selectAge)] /
-                              sum(dataSetPredict$Pop))[[1]]
+                                           as.numeric(input$selectAge)] /
+                                     sum(dataSetPredict$Pop))[[1]]
                     } else {
                          probProduitCumul <- probProduitCumul * 
                               ( sum(dataEmploi[as.numeric(input$selectOccupation), ]) /
-                              sum(dataSetPredict$Pop))[[1]]
+                                     sum(dataSetPredict$Pop))[[1]]
                     }
                }
           }
           
           #
-          # Variable âge et sexe-âge
+          # Variable âge 
           #
-          if (input$checkGroupSexe == 1) { #Female
-               if (input$selectAge == 1){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Female_16_26 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 2){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Female_32_39 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 3){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Female_40_52 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 4){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Female_53_65 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 5){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Female_66_76 / 
-                         dataSetPredict$Pop
-               }
-          } else if (input$checkGroupSexe == 2){ #Male
-               if (input$selectAge == 1){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Male_16_26 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 2){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Male_32_39 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 3){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Male_40_52 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 4){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Male_53_65 / 
-                         dataSetPredict$Pop
-               } else if (input$selectAge == 5){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Male_66_76 / 
-                         dataSetPredict$Pop
-               }
-          } else if (input$checkGroupSexe == 3 | input$checkGroupSexe == 0){ 
-               # Unisexe et sans variable sexe
+          if (input$checkGroupSexe == 3 | input$checkGroupSexe == 0){ 
                if (input$selectAge == 1){
                     probProduitCumul <- probProduitCumul * dataSetPredict$Pop_16_26 / 
                          dataSetPredict$Pop
@@ -264,31 +134,9 @@ shinyServer(function(input, output) {
           }
           
           #
-          # Variable état civil et sexe - état civil
+          # Variable état civil
           #
           if( input$checkGroupSexe == 1){
-               if( input$checkGroupStatut == 1){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Celibataire_F / 
-                         dataSetPredict$Pop
-               } else if ( input$checkGroupStatut == 2){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Conjoint_fait_F / 
-                         dataSetPredict$Pop
-               } else if (input$checkGroupStatut == 3){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Marie_F / 
-                         dataSetPredict$Pop
-               }
-          } else if (input$checkGroupSexe == 2){
-               if( input$checkGroupStatut == 1){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Celibataire_M / 
-                         dataSetPredict$Pop
-               } else if ( input$checkGroupStatut == 2){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Conjoint_fait_M / 
-                         dataSetPredict$Pop
-               } else if (input$checkGroupStatut == 3){
-                    probProduitCumul <- probProduitCumul * dataSetPredict$Marie_M / 
-                         dataSetPredict$Pop
-               }
-          } else if (input$checkGroupSexe == 3){
                if( input$checkGroupStatut == 1){
                     probProduitCumul <- probProduitCumul * dataSetPredict$Celibataire / 
                          dataSetPredict$Pop
@@ -300,6 +148,7 @@ shinyServer(function(input, output) {
                          dataSetPredict$Pop
                }
           }
+          
           
           #
           # Variable type de résidence
@@ -335,22 +184,10 @@ shinyServer(function(input, output) {
           
           if (input$checkGroupColocation == 1){
                if (input$selectAge != 0){
-                    if (input$checkGroupSexe != 0){
-                         probProduitCumul <- probProduitCumul * 
-                              probColocation[as.numeric(input$selectAge), 
-                                             (4 - as.numeric(input$checkGroupSexe))][[1]]
-                    } else {
-                         probProduitCumul <- probProduitCumul * 
-                              probColocation[as.numeric(input$selectAge),]$Total
-                    }
+                    probProduitCumul <- probProduitCumul * 
+                         probColocation[as.numeric(input$selectAge),]$Total
                } else {
-                    if (input$checkGroupSexe != 0){
-                         probProduitCumul <- probProduitCumul * 
-                              probColocation[6, 
-                                             (4 - as.numeric(input$checkGroupSexe))][[1]]
-                    } else {
-                         probProduitCumul <- probProduitCumul * probColocation[6, ]$Total
-                    }
+                    probProduitCumul <- probProduitCumul * probColocation[6, ]$Total
                }
           }
           
@@ -394,8 +231,8 @@ shinyServer(function(input, output) {
                                           textsize = '15px', 
                                           direction = 'auto' 
                                      )) 
-
-
+                    
+                    
                } else if (probProduitCumul != 1){
                     #Calcul de la prédiction
                     prediction <- round(probProduitCumul * dataSetPredict$Pop)
@@ -426,7 +263,7 @@ shinyServer(function(input, output) {
                                           "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
                                           "<b>Prédiction :</b>", prediction,"<br>",
                                           "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
-
+                    
                     
                     leaflet(FSA.shapeCity) %>% addTiles() %>%
                          addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
@@ -442,5 +279,88 @@ shinyServer(function(input, output) {
                                      )) 
                }
           }
-     })
+     }) #map
+     
+     output$mapPersona <- renderLeaflet({
+          probProduitCumul <- 1
+          if(input$selectRegionPersona == 1){
+               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 3) %in% c("J8P", "J8R", 
+                                                                                             "J8T", "J8V"))
+               dataSetPredictCity <- subset(dataSetPredict, 
+                                            substr(dataSetPredict$GEO_CODE, 1, 3) %in% c("J8P", "J8R",
+                                                                                         "J8T", "J8V"))
+          } else if (input$selectRegionPersona == 2) {
+               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 2) %in% "H7") 
+               dataSetPredictCity <- subset(dataSetPredict, 
+                                            substr(dataSetPredict$GEO_CODE, 1, 2) %in% "H7")
+          } else if (input$selectRegionPersona == 3) {
+               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 3) %in% c("J4G", "J4H", 
+                                                                                             "J4J", "J4K", 
+                                                                                             "J4L", "J4M", 
+                                                                                             "J4N"))
+               dataSetPredictCity <- subset(dataSetPredict, 
+                                            substr(dataSetPredict$GEO_CODE, 1, 3) %in% c("J4G", "J4H", 
+                                                                                         "J4J", "J4K", 
+                                                                                         "J4L", "J4M", 
+                                                                                         "J4N"))
+          } else if (input$selectRegionPersona == 4) {
+               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 2) %in% c("H1", "H2", "H3",
+                                                                                             "H4", "H5", "H8",
+                                                                                             "H9"))
+               dataSetPredictCity <- subset(dataSetPredict, 
+                                            substr(dataSetPredict$GEO_CODE, 1, 2) %in% c("H1", "H2", "H3",
+                                                                                         "H4", "H5", "H8",
+                                                                                         "H9"))
+          }
+          
+          if (input$checkGroupPersona == 1){
+               probProduitCumul <- probProduitCumul * 
+                    ((dataEducation[1,10] + dataEducation[4,10]) / sum(dataSetPredict$Pop))[[1]] *
+                    dataSetPredict$Pop_Male_16_26 / 
+                    dataSetPredict$Pop * (dataSetPredict$sal_2 / dataSetPredict$Pop)
+          } else if (input$checkGroupPersona == 2){
+               # Comptable fait parti de catégorie gestion, affaire et service
+               probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Female_32_39 / 
+                    dataSetPredict$Pop * (dataSetPredict$sal_6 / dataSetPredict$Pop) * 
+                    ( (dataEmploi[2, 2] + dataEmploi[3, 2] + dataEmploi[8, 2]) / 
+                           sum(dataSetPredict$Pop))[[1]]
+          } else if (input$checkGroupPersona == 3){
+               probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Male_40_52 / 
+                    dataSetPredict$Pop * (dataSetPredict$sal_11 / dataSetPredict$Pop) * 
+                    ( (dataEmploi[2, 3] + dataEmploi[3, 3]) / 
+                           sum(dataSetPredict$Pop))[[1]]
+          } else if (input$checkGroupPersona == 4){
+               probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Female_53_65 / 
+                    dataSetPredict$Pop * (dataSetPredict$sal_6 / dataSetPredict$Pop) * 
+                    ( dataEmploi[6, 4] / 
+                           sum(dataSetPredict$Pop))[[1]]
+          } else if (input$checkGroupPersona == 5){
+               probProduitCumul <- probProduitCumul * dataSetPredict$Pop_Male_66_76 / 
+                    dataSetPredict$Pop * (dataSetPredict$sal_5 / dataSetPredict$Pop) 
+          }
+          if (input$selectRegionPersona != ""){
+               #Calcul de la prédiction
+               prediction <- round(probProduitCumul * dataSetPredict$Pop)
+               # Descriptiosn du popup de la carte
+               descriptions <- paste("<b><FONT COLOR=#31B404> Détails du RTA</FONT></b> <br>",
+                                     "<b> RTA: </b> ", FSA.shapeCity$RTACIDU, "<br>",
+                                     "<b>Prédiction :</b>", prediction,"<br>",
+                                     "<b>Population :</b>", dataSetPredict$Pop,"<br>")%>% lapply(htmltools::HTML) 
+               
+               leaflet(FSA.shapeCity) %>% addTiles() %>%
+                    addPolygons(color = "#444444", weight = 1, smoothFactor = 1,
+                                opacity = 1.0, fillOpacity = 0.5,
+                                fillColor = ~colorQuantile("OrRd", unique(prediction))(prediction),
+                                highlightOptions = highlightOptions(color = "white", weight = 2,
+                                                                    bringToFront = TRUE),
+                                label = descriptions,
+                                labelOptions = labelOptions( 
+                                     style = list("front-weight" = "normal", padding = "3px 8px"), 
+                                     textsize = '15px', 
+                                     direction = 'auto' 
+                                ))
+               
+          }
+          
+     }) #mapPersona
 })
