@@ -1,3 +1,15 @@
+%%% Copyright (C) 2017 David Beauchemin
+%%%
+%%% Ce fichier et tous les fichiers .tex ou .Rnw dont la racine est
+%%% mentionnée dans les commandes \include ci-dessous font partie du
+%%% projet «Actulab Co-operators 2017»
+%%% https://github.com/davebulaval/Actulab_COOP
+%%%
+%%% Cette création est mise à disposition selon le contrat
+%%% Attribution-Partage dans les mêmes conditions 4.0
+%%% International de Creative Commons.
+%%% http://creativecommons.org/licenses/by-sa/4.0/
+
 \documentclass[11pt,french]{article}\usepackage[]{graphicx}\usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
@@ -77,6 +89,12 @@
   \usepackage{fontawesome} %%also cool logo
   \usepackage[framemethod=TikZ]{mdframed}
   
+  % Commande pour licence voir github
+  \newcommand{\viewsource}[1]{%
+  \href{#1}{%
+      Voir sur GitHub \raisebox{-1pt}{\footnotesize\faGithub}}}
+   \newcommand{\ghurl}{https://github.com/davebulaval/Actulab_COOP}
+  
   % Creation of environment to add additional informations
   % Provided by Samuel Cabral Cruz
 \mdfsetup{
@@ -93,19 +111,23 @@
 	\begin{minipage}{10cm}}
 	{	\end{minipage}
 	\end{mdframed}}
-	
+
+%% Changement font TOC
+\usepackage{tocloft}
+\renewcommand\cftpartfont{\LARGE\bfseries}
+\renewcommand\cftpartpagefont{\LARGE\bfseries}
+
 %% meta donnée document
 \title{Résolution de problématique de \\ Co-Operators \\ \bigskip Où sont les clients que nous ciblons ?}
 \author{\textbf{Présenter par \\ David Beauchemin}}
 \date{\today}
-\def\versionnumber{1.0}
  
- 
+%header
 \usepackage{fancyhdr}
- 
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Où sont les clients que nous ciblons ?}
+\rhead{Co-operators}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -113,15 +135,14 @@
 \makeatletter
   \begin{titlepage}
   \centering
-      {\LARGE \textbf{\textsc{Actulab}}}\\
+      {\fontsize{52}{52} \textbf{\textsc{Actulab}}}\\
     \vspace{2cm}
     \vspace{2cm}
-      {\LARGE \textbf{\@title}} \\
     \vspace{2cm}
+      {\fontsize{20}{20}\textbf{\@title}} \\
     \vfill
-       {\Large \@author} \\
+       {\Huge \@author} \\
     \vspace{8cm}
-        {\large\textbf{\versionnumber}}\\
     \vfill
   \end{titlepage}
 \makeatother
@@ -132,18 +153,18 @@
 
 \tableofcontents
 
-\newpage
+\clearpage
 
 %%%%%% SOMMAIRE %%%%%%%%
 \part{Rapport sommaire}
 
 \section{Détails techniques sommaires}
 
-\subsection{Analyse du mandat}
+\subsection*{Analyse du mandat}
 
 Déterminer la distribution d'une ou plusieurs variables sur un territoire. Prédire la distribution des personas sur un territoire à l'aide de la distribution des variables.
 
-\subsection{Collecte des données}
+\subsection*{Collecte des données}
 
 Voici la liste des différents rapports et données ayant été utilisés lors de la réalisation du rapport :
 
@@ -196,6 +217,10 @@ Les distributions du persona 1 et du persona 5 peuvent être ajustées selon des
 
 Il est possible de consulter l'ensemble du code source et les données utilisées pour le projet à partir de la \href{https://davebulaval.github.io/Actulab_COOP/}{page web} du dépôt \href{https://github.com/davebulaval/Actulab_COOP}{\emph{GitHub}}.
 
+\section{Auteur}
+\href{mailto:david.beauchemin.5@ulaval.ca}{David Beauchemin}, étudiant en actuariat à l'Université Laval.
+
+
 \newpage
 %%%%%% Content %%%%%%%%
 \part{Rapport détaillé}
@@ -209,7 +234,7 @@ Afin d'offrir un support amélioré aux différentes agences d'assurances de Co-
 
 \section{Détails techniques}
 
-\subsection*{Mandat}
+\subsection{Mandat}
 
 Le mandat de cette problématique Actulab correspond à déterminer la distribution des différentes variables observées des personas en plus de toutes autres variables jugées pertinentes. Cette distribution doit pouvoir être représentée sur un territoire avec une échelle de région de tri d'acheminement (RTA).
 \newline
@@ -221,7 +246,7 @@ La modélisation des personas permettra d'offrir une personnalisation des produi
 
 Le projet sera remis à Co-operators dans le cadre du projet Actulab 2017.
 
-\subsection*{Collecte des données}
+\subsection{Collecte des données}
 
 Depuis l'essor du \emph{Big Data} et du \emph{deep learning}, de nombreuses bases de données sont devenues disponibles gratuitement en ligne. Ce mouvement de \emph{démocratisation} des données a aussi été incorporé auprès de nombreuses instances gouvernementales. À cet effet, Statistique Canada, offre l'ensemble des jeux de données des recensements depuis 1991. De plus, de nombreux rapports et jeux de données provinciales sont aussi disponibles. Cet accès à un nombre important de données a permis de résoudre la problématique abordée.
 \newline
@@ -244,11 +269,11 @@ De plus, l'enquête nationale auprès des ménages de \href{http://www12.statcan
 Finalement, afin de représenter cartographiquement les prédictions et les variables, les données sur les polygones des régions de tri d'acheminement \href{http://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-fra.cfm}{national} ont été utilisées. Il s'agit de la correspondance cartographique des RTA sous forme d'un polynôme à multiple côté. Ainsi, il a été possible de représenter dans l'application la distribution. Afin de déterminer les codes postaux des villes étudiées, la liste des régions de tri \href{https://fr.wikipedia.org/wiki/Liste_des_codes_postaux_canadiens_débutant_par_J}{d'acheminement} a été utilisée. Il s'agit essentiellement des codes postaux par ville ou arrondissement.
 
 
-\subsection*{Traitement des données}
+\subsection{Traitement des données}
 
 Avant de débuter la manipulation des données, l'analyse des caractéristiques des personas a permis de ressortir les différents besoins en données ainsi que les possibles manipulations à effectuer. 
 
-\subsubsection*{Caractéristiques des personas}
+\subsubsection{Caractéristiques des personas}
 On note les caractéristiques suivantes pour les différents profils types :
 
 \subsubsection*{Persona 1}
@@ -316,7 +341,7 @@ Les différents outils numériques utilisés lors de la résolution de cette pro
 Le principal enjeu de ce projet est la validité de la prédiction de la distribution des caractéristiques. Afin de bien représenter celles-ci sur le territoire, certaines hypothèses ont été nécessaires afin de simplifier le modèle et de permettre la réalisation du mandat.
 \newline
 
-\subsection*{Indépendance des variables}
+\subsection{Indépendance des variables}
 
 Tout d'abord, une hypothèse essentielle est l'indépendance entre les variables. Il s'agit d'une hypothèse courante en modélisation et celle-ci permet de simplifier le modèle. Grâce à cette hypothèse, l'ajout de variable dans le modèle a été beaucoup plus facile à réaliser. En effet, pour prédire le nombre de personas correspondant à une série de caractéristiques, on applique le concept suivant :
 \begin{align*}
@@ -346,23 +371,23 @@ Il devient ainsi beaucoup plus simple de modéliser la fonction conjointe des di
 \end{knitrout}
 Autrement dit, le test est non significatif et ne permet pas de rejeter l'hypothèse d'indépendance entre les variables. 
 
-\subsection*{Distribution uniforme sur les intervalles d'âges}
+\subsection{Distribution uniforme sur les intervalles d'âges}
 
 De plus, une seconde hypothèse importante est la distribution sur les intervalles d'âges. Il a été supposé que, sur l'intervalle d'âge de $x$ ans à $x + c$ ans, la répartition est distribuée uniformément. Autrement dit, la probabilité d'avoir $x$ ans est la même que d'avoir $x + c$ ans. Cette hypothèse permet d'effectuer une interpolation sur la segmentation du recensement. Les intervalles d’âges n’étant pas ceux recherchés, il a ainsi été possible de construire les intervalles d'âges des personas. Cette hypothèse n'a pas été mathématiquement testée, mais en considérant une certaine constante dans le taux de natalité, hormis le baby-boom d'après-guerre, il est convenable de dire que la distribution est uniforme.
 
-\subsection*{Distribution uniforme des travailleurs}
+\subsection{Distribution uniforme des travailleurs}
 
 Les trois prochaines hypothèses ont été les plus difficiles à établir et à valider. Elles sont importantes dans l'analyse. Ayant peu de données segmentées sur les travailleurs, il a été difficile de bien capter l'information. En effet, depuis la simplification du formulaire de recensement, le domaine d'occupation n'est pas inclus dans le recensement de 2011 et 2016. Par contre, l'enquête nationale auprès des ménages contient l'information à l'échelle provinciale. Étant donner que l'information a été segmentée en onze secteurs d'occupations, l'hypothèse suivante semblait adéquate. Soit que la distribution des 11 catégories d'occupation est uniformément distribuée dans la province. Autrement dit, la probabilité de retrouver un gestionnaire dans la RTA X1X est la même que dans la RTA X2X. Cela a ainsi permis de capter une partie de l'information sur l'occupation professionnelle des personas. 
 
-\subsection*{Distribution uniforme des étudiants}
+\subsection{Distribution uniforme des étudiants}
 
 Toujours dans l'occupation des personas, la distribution de la caractéristique étudiante n'est pas incluse dans le recensement. En effet, les étudiants ne sont pas compris dans la population active, il devient donc difficile de segmenter l'information jusqu'à la RTA. Pour trouver la proportion des étudiants pour l'ensemble du Québec, la contribution du rapport sur les statistiques de l'enseignement supérieur fut nécessaire. Celui-ci a permis d'établir le nombre d'étudiants qui fréquentent un établissement d'enseignement supérieur. En consultant les chiffres, on constate qu'environ 50 \% de la population étudiante fréquente un établissement Collégiale de Montréal et de 60 \% pour un établissement universitaire. Il devient donc difficile de déterminer la distribution des étudiants en périphérie des établissements scolaires. En supposant que l'étalement urbain autour de cet établissement est exponentiellement décroissant selon la facilité d'accès via le transport en commun et le réseau routier normal. On peut supposer une certaine distribution uniforme des étudiants dans les régions avoisinantes. Il a été ainsi conclu que l'hypothèse de distribution uniforme des étudiants sur le territoire est plausible et sera utilisée pour le projet. L'analyse d'une piste de solution sur cette variable est abordée plus loin.
 
-\subsection*{Distribution uniforme des colocataires}
+\subsection{Distribution uniforme des colocataires}
 
 Pour cette dernière hypothèse de distribution, pour les mêmes raisons de disponibilité de l'information ainsi que la difficulté de segmentation. Il était difficile de bien modéliser la variable. Toutefois, à l'aide du bulletin du ministère de la Famille, le comportement des Québécois en matière de colocation a été étudié. L'étude fait état d'une variation plus ou moins grande selon l'intervalle d'âge et la région. Étant donné que les intervalles d'âge sont relativement large la distribution uniforme sur la colocation semblait approprié et adéquate. Cette hypothèse a donc été retenue, ce qui permet de simplifier grandement le modèle. 
 
-\subsection*{Retraite à 65 ans}
+\subsection{Retraite à 65 ans}
 
 Afin de simplifier le modèle, l'hypothèse de retraite à l'âge unique de 65 ans a été retenue. En effet, il était difficile de bien modéliser la retraite progressive, la retraite anticipée, la retraite \emph{normale} et la retraite prolongée. Le principal facteur de cette hypothèse a été le facteur temps dans la réalisation du projet. À partir des données disponibles sur la retraite de Retraite Québec, la modélisation de cette variable aurait été plus complétée.
 \newline
@@ -403,7 +428,7 @@ Tout d'abord, si on effectue une analyse pour l'ensemble de la province, on rema
 \end{itemize}
 
 
-\subsection*{Jacob}
+\subsection{Jacob}
 Le persona de Jacob possède les caractéristiques suivantes : 
 \begin{itemize}
 \item 20 ans;
@@ -532,7 +557,7 @@ En observant les graphes Q-Q plot, on peut déduire que la loi Normale est la lo
 
 On en conclut que, la distribution des \emph{Jacob} sur le territoire Lavallois suit une loi Normale avec paramètre $\mu = 13.368421, \sigma = 1.958306$.
 
-\subsection*{Maria}
+\subsection{Maria}
 Le persona de Maria possède les caractéristiques suivantes : 
 \begin{itemize}
 \item 35 ans;
@@ -609,7 +634,7 @@ En observant les graphes Q-Q plot, on peut déduire que la loi Normale n'est pas
 
 On en conclut que la distribution n'est pas ajustable sur une loi Normale.
 
-\subsection*{David}
+\subsection{David}
 Le persona de Maria possède les caractéristiques suivantes : 
 \begin{itemize}
 \item 45 ans;
@@ -684,7 +709,7 @@ On présente les graphiques de l'ajustement des données des régions de tri d'a
 
 En observant les graphes Q-Q plot, on peut déduire que la loi Normale n'est pas une loi approprié pour représenter la fonction de densité empirique. On suppose la même problématique soulevé lors de l'analyse de Maria.
 
-\subsection*{Claire}
+\subsection{Claire}
 Le persona de Claire possède les caractéristiques suivantes : 
 \begin{itemize}
 \item 61 ans;
@@ -758,7 +783,7 @@ On présente les graphiques de l'ajustement des données des régions de tri d'a
 
 En observant les graphes Q-Q plot, on peut déduire que la loi Normale n'est pas une loi approprié pour représenter la fonction de densité empirique. On suppose la même problématique soulevé lors de l'analyse de Maria.
 
-\subsection*{Daniel}
+\subsection{Daniel}
 Le persona de Daniel possède les caractéristiques suivantes : 
 \begin{itemize}
 \item 71 ans;
@@ -881,6 +906,10 @@ On présente les graphiques de l'ajustement des données des régions de tri d'a
 En observant les graphes Q-Q plot, on peut déduire que la loi Normale est la loi qui semble le mieux représenter la fonction de densité empirique. \newline
 
 On en conclut que, la distribution des \emph{Daniel} sur le territoire Lavallois suis une loi Normale avec paramètre $\mu = 88.89474, \sigma = 11.678494$.
+
+\subsection*{Conclusion}
+Pour conclure, après l'analyse des différentes variables et l'analyse de la distribution des personas, on constate que les différentes hypothèses utilisées dans le modèle sont cohérentes. De plus, il devient ainsi possible de bien représenter la distribution des différents personas.
+
 
 \section{Pistes d'améliorations}
 
