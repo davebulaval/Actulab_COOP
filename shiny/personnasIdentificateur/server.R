@@ -3,15 +3,6 @@ library(shiny)
 
 source( "load_data.R" )
 
-# Variable revenu unisexe OK
-# Variable revenu Male/femme OK
-# Variable population unisexe OK
-# Variable population Male/female OK
-# Variable type d'occupation unisexe OK 
-# Variable type de résidence unisexe OK
-# Variable nombre d'enfant et couple OK
-# Variable sexe OK
-
 shinyServer(function(input, output) {
      
      output$map <- renderLeaflet({
