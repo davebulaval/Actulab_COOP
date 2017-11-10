@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.19)  9 NOV 2017 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.19)  9 NOV 2017 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,20 +6,19 @@ entering extended mode
 (./rapport_detail.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
-(c:/texlive/2017/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (c:/texlive/2017/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -85,10 +84,10 @@ File: babel.def 2017/06/29 3.12 Babel common definitions
 (c:/texlive/2017/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2017/06/29 3.12 Babel switching mechanism
 )
-\babel@savecnt=\count88
+\babel@savecnt=\count87
 \U@D=\dimen109
 )
-\FB@nonchar=\count89
+\FB@nonchar=\count88
 \FBcolonsp=\toks15
 \FBthinsp=\toks16
 Package babel Info: Making : an active character on input line 322.
@@ -96,15 +95,15 @@ Package babel Info: Making ; an active character on input line 323.
 Package babel Info: Making ! an active character on input line 324.
 Package babel Info: Making ? an active character on input line 325.
 \FBguillsp=\toks17
-\FBguill@level=\count90
+\FBguill@level=\count89
 \FB@everypar=\toks18
 \FB@Mht=\dimen110
-\mc@charclass=\count91
-\mc@charfam=\count92
-\mc@charslot=\count93
-\std@mcc=\count94
-\dec@mcc=\count95
-\c@FBcaption@count=\count96
+\mc@charclass=\count90
+\mc@charfam=\count91
+\mc@charslot=\count92
+\std@mcc=\count93
+\dec@mcc=\count94
+\c@FBcaption@count=\count95
 \listindentFB=\skip44
 \descindentFB=\skip45
 \labelwidthFB=\skip46
@@ -133,13 +132,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count97
+\inf@bad=\count96
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count98
-\leftroot@=\count99
+\uproot@=\count97
+\leftroot@=\count98
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count100
-\DOTSCASE@=\count101
+\classnum@=\count99
+\DOTSCASE@=\count100
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -148,15 +147,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen114
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count102
-\c@MaxMatrixCols=\count103
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
 \dotsspace@=\muskip10
-\c@parentequation=\count104
-\dspbrk@lvl=\count105
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
 \tag@help=\toks20
-\row@=\count106
-\column@=\count107
-\maxfields@=\count108
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
 \andhelp@=\toks21
 \eqnshift@=\dimen115
 \alignsep@=\dimen116
@@ -529,7 +528,7 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \minrowclearance=\skip54
 )
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count109
+\rownum=\count108
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -600,15 +599,15 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen123
-\Hy@linkcounter=\count110
-\Hy@pagecounter=\count111
+\Hy@linkcounter=\count109
+\Hy@pagecounter=\count110
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count112
+\Hy@SavedSpaceFactor=\count111
 
 (c:/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -621,7 +620,7 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count113
+\c@Hy@tempcnt=\count112
 
 (c:/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
@@ -629,7 +628,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen124
-\Fld@menulength=\count114
+\Fld@menulength=\count113
 \Field@Width=\dimen125
 \Fld@charsize=\dimen126
 Package hyperref Info: Hyper figures OFF on input line 6358.
@@ -641,17 +640,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count115
-\c@Item=\count116
-\c@Hfootnote=\count117
+\Hy@abspage=\count114
+\c@Item=\count115
+\c@Hfootnote=\count116
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count118
-\c@bookmark@seq@number=\count119
+\Fld@listcount=\count117
+\c@bookmark@seq@number=\count118
 
 (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -674,10 +673,10 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 )
 (c:/texlive/2017/texmf-dist/tex/latex/numprint/numprint.sty
 Package: numprint 2012/08/20 v1.39 Print numbers (HH)
-\c@nprt@mantissa@digitsbefore=\count120
-\c@nprt@mantissa@digitsafter=\count121
-\c@nprt@exponent@digitsbefore=\count122
-\c@nprt@exponent@digitsafter=\count123
+\c@nprt@mantissa@digitsbefore=\count119
+\c@nprt@mantissa@digitsafter=\count120
+\c@nprt@exponent@digitsbefore=\count121
+\c@nprt@exponent@digitsafter=\count122
 \nprt@digitwidth=\skip58
 \nprt@sepwidth=\skip59
 \nprt@decimalwidth=\skip60
@@ -685,12 +684,12 @@ Package: numprint 2012/08/20 v1.39 Print numbers (HH)
 \nprt@digittoks=\toks29
 \nprt@pretoks=\toks30
 \nprt@posttoks=\toks31
-\nprt@thisdigit=\count124
-\nprt@curpos=\count125
-\nprt@rndpos=\count126
-\c@nprt@digitsfirstblock=\count127
-\c@nprt@blockcnt=\count128
-\c@nprt@cntprint=\count129
+\nprt@thisdigit=\count123
+\nprt@curpos=\count124
+\nprt@rndpos=\count125
+\c@nprt@digitsfirstblock=\count126
+\c@nprt@blockcnt=\count127
+\c@nprt@cntprint=\count128
 
 No configuration file `numprint.cfg' found.)
 (c:/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
@@ -700,13 +699,13 @@ Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 \TX@old@col=\dimen134
 \TX@target=\dimen135
 \TX@delta=\dimen136
-\TX@cols=\count130
+\TX@cols=\count129
 \TX@ftn=\toks32
 )
 (c:/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cntb=\count131
+\multirow@cntb=\count130
 \multirow@dima=\skip63
 \bigstrutjot=\dimen137
 )
@@ -725,18 +724,18 @@ Package: expl3 2017/07/19 L3 programming layer (loader)
 
 (c:/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2017/07/19 L3 programming layer (code)
-\c_max_int=\count132
-\l_tmpa_int=\count133
-\l_tmpb_int=\count134
-\g_tmpa_int=\count135
-\g_tmpb_int=\count136
-\g__intarray_font_int=\count137
-\g__prg_map_int=\count138
-\c_log_iow=\count139
-\l_iow_line_count_int=\count140
-\l__iow_line_target_int=\count141
-\l__iow_one_indent_int=\count142
-\l__iow_indent_int=\count143
+\c_max_int=\count131
+\l_tmpa_int=\count132
+\l_tmpb_int=\count133
+\g_tmpa_int=\count134
+\g_tmpb_int=\count135
+\g__intarray_font_int=\count136
+\g__prg_map_int=\count137
+\c_log_iow=\count138
+\l_iow_line_count_int=\count139
+\l__iow_line_target_int=\count140
+\l__iow_one_indent_int=\count141
+\l__iow_indent_int=\count142
 \c_zero_dim=\dimen138
 \c_max_dim=\dimen139
 \l_tmpa_dim=\dimen140
@@ -755,77 +754,77 @@ Package: expl3 2017/07/19 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count144
-\c__fp_leading_shift_int=\count145
-\c__fp_middle_shift_int=\count146
-\c__fp_trailing_shift_int=\count147
-\c__fp_big_leading_shift_int=\count148
-\c__fp_big_middle_shift_int=\count149
-\c__fp_big_trailing_shift_int=\count150
-\c__fp_Bigg_leading_shift_int=\count151
-\c__fp_Bigg_middle_shift_int=\count152
-\c__fp_Bigg_trailing_shift_int=\count153
-\c__fp_rand_size_int=\count154
-\c__fp_rand_four_int=\count155
-\c__fp_rand_eight_int=\count156
-\l__sort_length_int=\count157
-\l__sort_min_int=\count158
-\l__sort_top_int=\count159
-\l__sort_max_int=\count160
-\l__sort_true_max_int=\count161
-\l__sort_block_int=\count162
-\l__sort_begin_int=\count163
-\l__sort_end_int=\count164
-\l__sort_A_int=\count165
-\l__sort_B_int=\count166
-\l__sort_C_int=\count167
-\l__tl_build_start_index_int=\count168
-\l__tl_build_index_int=\count169
-\l__tl_analysis_normal_int=\count170
-\l__tl_analysis_index_int=\count171
-\l__tl_analysis_nesting_int=\count172
-\l__tl_analysis_type_int=\count173
-\l__regex_internal_a_int=\count174
-\l__regex_internal_b_int=\count175
-\l__regex_internal_c_int=\count176
-\l__regex_balance_int=\count177
-\l__regex_group_level_int=\count178
-\l__regex_mode_int=\count179
-\c__regex_cs_in_class_mode_int=\count180
-\c__regex_cs_mode_int=\count181
-\l__regex_catcodes_int=\count182
-\l__regex_default_catcodes_int=\count183
-\c__regex_catcode_D_int=\count184
-\c__regex_catcode_S_int=\count185
-\c__regex_catcode_L_int=\count186
-\c__regex_catcode_O_int=\count187
-\c__regex_catcode_A_int=\count188
-\c__regex_all_catcodes_int=\count189
-\l__regex_show_lines_int=\count190
-\l__regex_min_state_int=\count191
-\l__regex_max_state_int=\count192
-\l__regex_left_state_int=\count193
-\l__regex_right_state_int=\count194
-\l__regex_capturing_group_int=\count195
-\l__regex_min_pos_int=\count196
-\l__regex_max_pos_int=\count197
-\l__regex_curr_pos_int=\count198
-\l__regex_start_pos_int=\count199
-\l__regex_success_pos_int=\count266
-\l__regex_curr_char_int=\count267
-\l__regex_curr_catcode_int=\count268
-\l__regex_last_char_int=\count269
-\l__regex_case_changed_char_int=\count270
-\l__regex_curr_state_int=\count271
-\l__regex_step_int=\count272
-\l__regex_min_active_int=\count273
-\l__regex_max_active_int=\count274
-\l__regex_replacement_csnames_int=\count275
-\l__regex_match_count_int=\count276
-\l__regex_min_submatch_int=\count277
-\l__regex_submatch_int=\count278
-\l__regex_zeroth_submatch_int=\count279
-\g__debug_trace_regex_int=\count280
+\l_keys_choice_int=\count143
+\c__fp_leading_shift_int=\count144
+\c__fp_middle_shift_int=\count145
+\c__fp_trailing_shift_int=\count146
+\c__fp_big_leading_shift_int=\count147
+\c__fp_big_middle_shift_int=\count148
+\c__fp_big_trailing_shift_int=\count149
+\c__fp_Bigg_leading_shift_int=\count150
+\c__fp_Bigg_middle_shift_int=\count151
+\c__fp_Bigg_trailing_shift_int=\count152
+\c__fp_rand_size_int=\count153
+\c__fp_rand_four_int=\count154
+\c__fp_rand_eight_int=\count155
+\l__sort_length_int=\count156
+\l__sort_min_int=\count157
+\l__sort_top_int=\count158
+\l__sort_max_int=\count159
+\l__sort_true_max_int=\count160
+\l__sort_block_int=\count161
+\l__sort_begin_int=\count162
+\l__sort_end_int=\count163
+\l__sort_A_int=\count164
+\l__sort_B_int=\count165
+\l__sort_C_int=\count166
+\l__tl_build_start_index_int=\count167
+\l__tl_build_index_int=\count168
+\l__tl_analysis_normal_int=\count169
+\l__tl_analysis_index_int=\count170
+\l__tl_analysis_nesting_int=\count171
+\l__tl_analysis_type_int=\count172
+\l__regex_internal_a_int=\count173
+\l__regex_internal_b_int=\count174
+\l__regex_internal_c_int=\count175
+\l__regex_balance_int=\count176
+\l__regex_group_level_int=\count177
+\l__regex_mode_int=\count178
+\c__regex_cs_in_class_mode_int=\count179
+\c__regex_cs_mode_int=\count180
+\l__regex_catcodes_int=\count181
+\l__regex_default_catcodes_int=\count182
+\c__regex_catcode_D_int=\count183
+\c__regex_catcode_S_int=\count184
+\c__regex_catcode_L_int=\count185
+\c__regex_catcode_O_int=\count186
+\c__regex_catcode_A_int=\count187
+\c__regex_all_catcodes_int=\count188
+\l__regex_show_lines_int=\count189
+\l__regex_min_state_int=\count190
+\l__regex_max_state_int=\count191
+\l__regex_left_state_int=\count192
+\l__regex_right_state_int=\count193
+\l__regex_capturing_group_int=\count194
+\l__regex_min_pos_int=\count195
+\l__regex_max_pos_int=\count196
+\l__regex_curr_pos_int=\count197
+\l__regex_start_pos_int=\count198
+\l__regex_success_pos_int=\count199
+\l__regex_curr_char_int=\count266
+\l__regex_curr_catcode_int=\count267
+\l__regex_last_char_int=\count268
+\l__regex_case_changed_char_int=\count269
+\l__regex_curr_state_int=\count270
+\l__regex_step_int=\count271
+\l__regex_min_active_int=\count272
+\l__regex_max_active_int=\count273
+\l__regex_replacement_csnames_int=\count274
+\l__regex_match_count_int=\count275
+\l__regex_min_submatch_int=\count276
+\l__regex_submatch_int=\count277
+\l__regex_zeroth_submatch_int=\count278
+\g__debug_trace_regex_int=\count279
 \c_empty_box=\box29
 \l_tmpa_box=\box30
 \l_tmpb_box=\box31
@@ -869,19 +868,19 @@ Package: expl3 2017/07/19 L3 programming layer (code)
 )
 (c:/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count281
+\l__driver_color_stack_int=\count280
 \l__driver_tmp_box=\box44
 ))
 Package: xparse 2017/07/19 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count282
-\g__xparse_grabber_int=\count283
-\l__xparse_m_args_int=\count284
-\l__xparse_mandatory_args_int=\count285
-\l__xparse_v_nesting_int=\count286
+\l__xparse_current_arg_int=\count281
+\g__xparse_grabber_int=\count282
+\l__xparse_m_args_int=\count283
+\l__xparse_mandatory_args_int=\count284
+\l__xparse_v_nesting_int=\count285
 )
 (c:/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count287
+\etb@tempcnta=\count286
 )
 (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
 Package: zref-abspage 2016/05/21 v2.26 Module abspage for zref (HO)
@@ -892,14 +891,14 @@ Package zref Info: New property list: main on input line 759.
 Package zref Info: New property: default on input line 760.
 Package zref Info: New property: page on input line 761.
 )
-\c@abspage=\count288
+\c@abspage=\count287
 Package zref Info: New property: abspage on input line 62.
 )
 (c:/texlive/2017/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip70
-\c@mdf@globalstyle@cnt=\count289
+\c@mdf@globalstyle@cnt=\count288
 \mdf@skipabove@length=\skip71
 \mdf@skipbelow@length=\skip72
 \mdf@leftmargin@length=\skip73
@@ -982,10 +981,10 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgf@yc=\dimen178
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count290
-\c@pgf@countb=\count291
-\c@pgf@countc=\count292
-\c@pgf@countd=\count293
+\c@pgf@counta=\count289
+\c@pgf@countb=\count290
+\c@pgf@countc=\count291
+\c@pgf@countd=\count292
 \t@pgf@toka=\toks37
 \t@pgf@tokb=\toks38
 \t@pgf@tokc=\toks39
@@ -1002,8 +1001,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count294
-\pgfsyssoftpath@bigbuffer@items=\count295
+\pgfsyssoftpath@smallbuffer@items=\count293
+\pgfsyssoftpath@bigbuffer@items=\count294
 )
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -1015,7 +1014,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen179
-\pgfmath@count=\count296
+\pgfmath@count=\count295
 \pgfmath@box=\box46
 \pgfmath@toks=\toks40
 \pgfmath@stack@operand=\toks41
@@ -1039,7 +1038,7 @@ x)
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
 etics.code.tex)))
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count297
+\c@pgfmathroundto@lastzeros=\count296
 ))
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
@@ -1075,7 +1074,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box47
 \pgf@hbox=\box48
 \pgf@layerbox@main=\box49
-\pgf@picture@serial@count=\count298
+\pgf@picture@serial@count=\count297
 )
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
@@ -1106,7 +1105,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen259
-\pgf@sys@shading@range@num=\count299
+\pgf@sys@shading@range@num=\count298
 )
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1161,7 +1160,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count300
+\pgf@plot@mark@count=\count299
 \pgfplotmarksize=\dimen264
 )
 \tikz@lastx=\dimen265
@@ -1174,18 +1173,18 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box53
 \tikz@tempbox=\box54
 \tikz@tempbox@bg=\box55
-\tikztreelevel=\count301
-\tikznumberofchildren=\count302
-\tikznumberofcurrentchild=\count303
-\tikz@fig@count=\count304
+\tikztreelevel=\count300
+\tikznumberofchildren=\count301
+\tikznumberofcurrentchild=\count302
+\tikz@fig@count=\count303
 
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count305
-\pgfmatrixcurrentcolumn=\count306
-\pgf@matrix@numberofcolumns=\count307
+\pgfmatrixcurrentrow=\count304
+\pgfmatrixcurrentcolumn=\count305
+\pgf@matrix@numberofcolumns=\count306
 )
-\tikz@expandcount=\count308
+\tikz@expandcount=\count307
 
 (c:/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
@@ -1226,7 +1225,7 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \mdf@horizontalspaceofbox=\skip134
 \mdfsubtitleheight=\skip135
 \mdfsubsubtitleheight=\skip136
-\c@mdfcountframes=\count309
+\c@mdfcountframes=\count308
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1242,11 +1241,24 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 . 
 . Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
 .................................................
-\mdf@envdepth=\count310
-\c@mdf@env@i=\count311
-\c@mdf@env@ii=\count312
-\c@mdf@zref@counter=\count313
+\mdf@envdepth=\count309
+\c@mdf@env@i=\count310
+\c@mdf@env@ii=\count311
+\c@mdf@zref@counter=\count312
 Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+(c:/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip137
+\f@nch@O@elh=\skip138
+\f@nch@O@erh=\skip139
+\f@nch@O@olh=\skip140
+\f@nch@O@orh=\skip141
+\f@nch@O@elf=\skip142
+\f@nch@O@erf=\skip143
+\f@nch@O@olf=\skip144
+\f@nch@O@orf=\skip145
 )
 (c:/texlive/2017/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -1407,44 +1419,42 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (./rapport_detail.aux (./section/license.aux) (./section/remerciements.aux))
+)) (./rapport_detail.aux (./section/license.aux))
 \openout1 = `rapport_detail.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 110.
 
-
-(c:/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 103.
-
+LaTeX Font Info:    ... okay on input line 110.
 (c:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count314
+\scratchcounter=\count313
 \scratchdimen=\dimen271
 \scratchbox=\box61
-\nofMPsegments=\count315
-\nofMParguments=\count316
+\nofMPsegments=\count314
+\nofMParguments=\count315
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count317
+\MPscratchCnt=\count316
 \MPscratchDim=\dimen272
-\MPnumerator=\count318
-\makeMPintoPDFobject=\count319
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
 \everyMPtoPDFconversion=\toks46
 ) (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1463,11 +1473,11 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \degres on input line 103.
-LaTeX Info: Redefining \dots on input line 103.
-LaTeX Info: Redefining \up on input line 103.
+LaTeX Info: Redefining \degres on input line 110.
+LaTeX Info: Redefining \dots on input line 110.
+LaTeX Info: Redefining \up on input line 110.
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 103.
+Package hyperref Info: Link coloring ON on input line 110.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1475,11 +1485,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count320
+\c@section@level=\count319
 )
-LaTeX Info: Redefining \ref on input line 103.
-LaTeX Info: Redefining \pageref on input line 103.
-LaTeX Info: Redefining \nameref on input line 103.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 
 (./rapport_detail.out) (./rapport_detail.out)
 \@outlinefile=\write4
@@ -1496,7 +1506,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-<./fig/by-sa.pdf, id=16, pagebox=cropbox, 121.45375pt x 43.16125pt>
+<./fig/by-sa.pdf, id=88, pagebox=cropbox, 121.45375pt x 43.16125pt>
 File: ./fig/by-sa.pdf Graphic file (type pdf)
 <use ./fig/by-sa.pdf>
 Package pdftex.def Info: ./fig/by-sa.pdf  used on input line 6. on input line 6
@@ -1517,83 +1527,50 @@ Package pdftex.def Info: ./fig/sa.pdf  used on input line 34. on input line 34.
 
 Package pdftex.def Info: Requested size: 31.29811pt x 31.29802pt on input line 
 34.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \include{section/license}
+l.130 \include{section/license}
                                 [1
 
- <./fig/by-sa.pdf> <./fig/by.pdf> <./fig/sa.pdf>]
-\openout2 = `section/remerciements.aux'.
-
- (./section/remerciements.tex
-<fig/signature.png, id=39, 381.425pt x 150.5625pt>
-File: fig/signature.png Graphic file (type png)
-<use fig/signature.png>
-Package pdftex.def Info: fig/signature.png  used on input line 5. on input line
- 5.
-Package pdftex.def Info: Requested size: 85.35713pt x 56.90648pt on input line 
-5.
-) [2
-
-
- <./fig/signature.png>]
-(./rapport_detail.toc)
+ <./fig/by-sa.pdf> <./fig/by.pdf> <./fig/sa.pdf>] (./rapport_detail.toc)
 \tf@toc=\write5
 \openout5 = `rapport_detail.toc'.
 
- [3
+ [2
 
-
-] [4
-
-]
+] [3]
 LaTeX Font Info:    Try loading font information for U+fontawesomeone on input 
-line 180.
+line 185.
 
 (c:/texlive/2017/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
 File: ufontawesomeone.fd 2016/05/22 Font definitions for U/fontawesomeone.
-) [5]
-Underfull \hbox (badness 10000) in paragraph at lines 197--199
-
- []
-
-
-Overfull \hbox (8.57666pt too wide) in paragraph at lines 200--201
-[]\T1/cmr/m/n/10 Afin d'of-frir un sup-port amé-lioré aux dif-fé-rentes agences
- d'as-su-rances de Co-operators,
- []
-
-
+) [4]
 Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--210
-
+Overfull \hbox (8.57666pt too wide) in paragraph at lines 208--209
+[]\T1/cmr/m/n/10 Afin d'of-frir un sup-port amé-lioré aux dif-fé-rentes agences
+ d'as-su-rances de Co-operators,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 217--219
-
- []
-
-[6
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 220--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
@@ -1607,230 +1584,277 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 232--234
 
  []
 
-[7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 290--292
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 310--313
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 295--297
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 324--327
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 324.
+Underfull \hbox (badness 10000) in paragraph at lines 331--334
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 325.
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 338.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 339.
 
 (c:/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 348--350
+) [9]
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 374--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--356
+Underfull \hbox (badness 10000) in paragraph at lines 377--379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--359
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--365
+Underfull \hbox (badness 10000) in paragraph at lines 386--388
 
  []
 
+[11]
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--368
+Package xcolor Warning: Incompatible color definition on input line 421.
 
- []
-
-[12]
-
-Package xcolor Warning: Incompatible color definition on input line 398.
-
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 423
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 446
 .
 (c:/texlive/2017/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [13]
-Underfull \hbox (badness 10000) in paragraph at lines 426--428
+) [12]
+Underfull \hbox (badness 10000) in paragraph at lines 449--451
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 437.
+Package xcolor Warning: Incompatible color definition on input line 460.
 
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 453.
-<figure/unnamed-chunk-5-1.pdf, id=137, pagebox=cropbox, 505.89pt x 505.89pt>
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 476.
+<figure/unnamed-chunk-5-1.pdf, id=221, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 456. 
-on input line 456.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 45
-6.
+Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 479. 
+on input line 479.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 47
+9.
 
-Package xcolor Warning: Incompatible color definition on input line 461.
+Package xcolor Warning: Incompatible color definition on input line 484.
 
-[14]
-<figure/unnamed-chunk-6-1.pdf, id=143, pagebox=cropbox, 505.89pt x 505.89pt>
+[13]
+<figure/unnamed-chunk-6-1.pdf, id=227, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 480. 
-on input line 480.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 48
-0.
+Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 503. 
+on input line 503.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 50
+3.
 
 
-Package xcolor Warning: Incompatible color definition on input line 485.
+Package xcolor Warning: Incompatible color definition on input line 508.
 
-[15 <./figure/unnamed-chunk-5-1.pdf>]
-<figure/unnamed-chunk-7-1.pdf, id=154, pagebox=cropbox, 505.89pt x 505.89pt>
+[14 <./figure/unnamed-chunk-5-1.pdf>]
+<figure/unnamed-chunk-7-1.pdf, id=238, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 504. 
-on input line 504.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 50
-4.
- [16 <./figure/unnamed-chunk-6-1.pdf>]
+Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 527. 
+on input line 527.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 52
+7.
+ [15 <./figure/unnamed-chunk-6-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 526.
+Package xcolor Warning: Incompatible color definition on input line 549.
 
-[17 <./figure/unnamed-chunk-7-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
+[16 <./figure/unnamed-chunk-7-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 562.
+Package xcolor Warning: Incompatible color definition on input line 585.
 
-[18]
-<figure/unnamed-chunk-10-1.pdf, id=185, pagebox=cropbox, 505.89pt x 505.89pt>
+[17]
+<figure/unnamed-chunk-10-1.pdf, id=267, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-10-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-10-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-10-1.pdf  used on input line 581.
- on input line 581.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 58
-1.
- [19 <./figure/unnamed-chunk-10-1.pdf>]
+Package pdftex.def Info: figure/unnamed-chunk-10-1.pdf  used on input line 604.
+ on input line 604.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 60
+4.
+ [18 <./figure/unnamed-chunk-10-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 603.
+Package xcolor Warning: Incompatible color definition on input line 626.
 
-[20]
+[19]
 
-Package xcolor Warning: Incompatible color definition on input line 639.
+Package xcolor Warning: Incompatible color definition on input line 662.
 
-<figure/unnamed-chunk-13-1.pdf, id=201, pagebox=cropbox, 505.89pt x 505.89pt>
+<figure/unnamed-chunk-13-1.pdf, id=284, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-13-1.pdf  used on input line 658.
- on input line 658.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 65
-8.
-[21]
+Package pdftex.def Info: figure/unnamed-chunk-13-1.pdf  used on input line 681.
+ on input line 681.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 68
+1.
+[20]
 
-Package xcolor Warning: Incompatible color definition on input line 678.
+Package xcolor Warning: Incompatible color definition on input line 701.
 
-[22 <./figure/unnamed-chunk-13-1.pdf>]
+[21 <./figure/unnamed-chunk-13-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 713.
+Package xcolor Warning: Incompatible color definition on input line 736.
 
-[23]
-<figure/unnamed-chunk-16-1.pdf, id=223, pagebox=cropbox, 505.89pt x 505.89pt>
+[22]
+<figure/unnamed-chunk-16-1.pdf, id=307, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-16-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-16-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-16-1.pdf  used on input line 732.
- on input line 732.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 73
-2.
- [24 <./figure/unnamed-chunk-16-1.pdf>]
+Package pdftex.def Info: figure/unnamed-chunk-16-1.pdf  used on input line 755.
+ on input line 755.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 75
+5.
+ [23 <./figure/unnamed-chunk-16-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 752.
+Package xcolor Warning: Incompatible color definition on input line 775.
 
 
-Package xcolor Warning: Incompatible color definition on input line 787.
+Package xcolor Warning: Incompatible color definition on input line 810.
 
-[25]
-<figure/unnamed-chunk-19-1.pdf, id=239, pagebox=cropbox, 505.89pt x 505.89pt>
+[24]
+<figure/unnamed-chunk-19-1.pdf, id=323, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-19-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-19-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-19-1.pdf  used on input line 806.
- on input line 806.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 80
-6.
+Package pdftex.def Info: figure/unnamed-chunk-19-1.pdf  used on input line 829.
+ on input line 829.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 82
+9.
 
 
-Package xcolor Warning: Incompatible color definition on input line 811.
+Package xcolor Warning: Incompatible color definition on input line 834.
 
-[26]
-<figure/unnamed-chunk-20-1.pdf, id=244, pagebox=cropbox, 505.89pt x 505.89pt>
+[25]
+<figure/unnamed-chunk-20-1.pdf, id=328, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-20-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-20-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-20-1.pdf  used on input line 830.
- on input line 830.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 83
-0.
+Package pdftex.def Info: figure/unnamed-chunk-20-1.pdf  used on input line 853.
+ on input line 853.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 85
+3.
 
 
-Package xcolor Warning: Incompatible color definition on input line 835.
+Package xcolor Warning: Incompatible color definition on input line 858.
 
-[27 <./figure/unnamed-chunk-19-1.pdf>]
-<figure/unnamed-chunk-21-1.pdf, id=255, pagebox=cropbox, 505.89pt x 505.89pt>
+[26 <./figure/unnamed-chunk-19-1.pdf>]
+<figure/unnamed-chunk-21-1.pdf, id=339, pagebox=cropbox, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-21-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-21-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-21-1.pdf  used on input line 854.
- on input line 854.
-Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 85
-4.
- [28 <./figure/unnamed-chunk-20-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 863--865
+Package pdftex.def Info: figure/unnamed-chunk-21-1.pdf  used on input line 877.
+ on input line 877.
+Package pdftex.def Info: Requested size: 360.0pt x 360.00264pt on input line 87
+7.
+ [27 <./figure/unnamed-chunk-20-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
 
  []
 
-[29 <./figure/unnamed-chunk-21-1.pdf>] [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 880.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 880.
- (./rapport_detail.aux
-(./section/license.aux) (./section/remerciements.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 880.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 880.
+
+Underfull \hbox (badness 10000) in paragraph at lines 887--889
+
+ []
+
+[28 <./figure/unnamed-chunk-21-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 890--892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 893--895
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 896--898
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--901
+
+ []
+
+[29]
+<fig/signature.png, id=364, 381.425pt x 150.5625pt>
+File: fig/signature.png Graphic file (type png)
+<use fig/signature.png>
+Package pdftex.def Info: fig/signature.png  used on input line 907. on input li
+ne 907.
+Package pdftex.def Info: Requested size: 113.81145pt x 85.36203pt on input line
+ 907.
+ [30 <./fig/signature.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 909.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 909.
+ (./rapport_detail.aux (./section/license.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 909.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 909.
 Package rerunfilecheck Info: File `rapport_detail.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 880.
+(rerunfilecheck)             Checksum: AB2B1D043BBA16EEA35FD6FD190A627C;1102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 909.
  ) 
 Here is how much of TeX's memory you used:
- 29673 strings out of 492990
- 549418 string characters out of 6136334
- 619149 words of memory out of 5000000
- 32728 multiletter control sequences out of 15000+600000
- 553307 words of font info for 73 fonts, out of 8000000 for 9000
+ 29823 strings out of 492990
+ 551081 string characters out of 6136334
+ 619959 words of memory out of 5000000
+ 32865 multiletter control sequences out of 15000+600000
+ 553929 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,12n,74p,10405b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,12n,74p,10405b,950s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2017/
 texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc}<c:/texlive/2017/texm
@@ -1843,25 +1867,27 @@ pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2017/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2017/texmf-di
-st/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2017/texmf-dist/fonts/t
-ype1/public/cm-super/sfbi1440.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx1000.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super
-/sfbx1095.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.
-pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/te
-xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2017
-/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2017/texmf-dis
-t/fonts/type1/public/cm-super/sfit1000.pfb><c:/texlive/2017/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm0500.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public
-/cm-super/sfrm0700.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/
-sfrm0900.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.p
-fb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/tex
-live/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2017/
-texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on rapport_detail.pdf (31 pages, 580086 bytes).
+st/fonts/type1/public/cm-super/sfbi1000.pfb><c:/texlive/2017/texmf-dist/fonts/t
+ype1/public/cm-super/sfbi1200.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publi
+c/cm-super/sfbi1440.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super
+/sfbx1000.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1095.
+pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/te
+xlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2017
+/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2017/texmf-dist/fonts/ty
+pe1/public/cm-super/sfit1000.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public
+/cm-super/sfrm0500.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/
+sfrm0700.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0900.p
+fb><c:/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/tex
+live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2017/
+texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2017/texmf-dist
+/fonts/type1/public/cm-super/sfti1095.pfb><c:/texlive/2017/texmf-dist/fonts/typ
+e1/public/cm-super/sftt1000.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/
+cm-super/sfxc1728.pfb>
+Output written on rapport_detail.pdf (31 pages, 641717 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 43 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 483 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
