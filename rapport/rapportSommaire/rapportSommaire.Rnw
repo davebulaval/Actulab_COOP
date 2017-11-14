@@ -1,0 +1,174 @@
+%%% Copyright (C) 2017 David Beauchemin
+%%%
+%%% Ce fichier et tous les fichiers .tex ou .Rnw dont la racine est
+%%% mentionnée dans les commandes \include ci-dessous font partie du
+%%% projet «Actulab Co-operators 2017»
+%%% https://github.com/davebulaval/Actulab_COOP
+%%%
+%%% Cette création est mise à disposition selon le contrat
+%%% Attribution-Partage dans les mêmes conditions 4.0
+%%% International de Creative Commons.
+%%% http://creativecommons.org/licenses/by-sa/4.0/
+
+\documentclass[11pt,french]{article}
+  \usepackage{babel} %%french
+  \usepackage{amsmath,amsfonts,amssymb} %%maths
+  \usepackage[utf8]{inputenc}   % LaTeX
+  \usepackage[T1]{fontenc}      % LaTeX
+  \usepackage[dvipsnames,table,xcdraw]{xcolor}
+  
+  %% image
+  \usepackage{graphicx}
+  	\graphicspath{{./fig/}} %fig path
+  %%lien hypertex
+  \usepackage[colorlinks, allcolors=Blue]{hyperref} 
+  %% package pour modifier les chapitres #2
+  \usepackage{titlesec}
+  %% for number separation
+  \usepackage[autolanguage]{numprint}
+  \setcounter{tocdepth}{4}
+  \setcounter{secnumdepth}{4}
+
+%% for licence
+  \usepackage{tabularx}
+  \usepackage{multirow}
+  %% no indent
+  \setlength{\parindent}{0pt}
+  \frenchbsetup{StandardItemLabels=true} % pour obtenir des puces par défaut dans les listes à puces A.B.
+  %% for moreInfo 
+  \usepackage{fontawesome} %%also cool logo
+  \usepackage[framemethod=TikZ]{mdframed}
+  
+  % Commande pour licence voir github
+  \newcommand{\viewsource}[1]{%
+  \href{#1}{%
+      Voir sur GitHub \raisebox{-1pt}{\footnotesize\faGithub}}}
+   \newcommand{\ghurl}{https://github.com/davebulaval/Actulab_COOP}
+  
+  % Creation of environment to add additional informations
+  % Provided by Samuel Cabral Cruz
+\mdfsetup{
+	linewidth=2pt,
+	nobreak=true,
+	backgroundcolor=Blue!10,
+	roundcorner=10pt}	
+\newenvironment{moreInfo}[1]
+	{\begin{mdframed}
+	\textcolor{darkgray}{\huge \raisebox{-3.5pt}{\faInfo} 
+	\hspace{0.5cm} \large\bfseries #1}\\[5pt]
+	\normalsize
+	\makebox[0.1\textwidth][l]{}	
+	\begin{minipage}{10cm}}
+	{	\end{minipage}
+	\end{mdframed}}
+
+%% Changement font TOC
+\usepackage{tocloft}
+\renewcommand\cftpartfont{\LARGE\bfseries}
+\renewcommand\cftpartpagefont{\LARGE\bfseries}
+
+%% meta donnée document
+\title{Résolution de problématique de \\ Co-Operators \\ \bigskip Où sont les clients que nous ciblons ?}
+\author{\textbf{Présenter par \\ David Beauchemin}}
+\date{\today}
+ 
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Où sont les clients que nous ciblons ?}
+\rhead{Co-operators}
+
+\begin{document}
+
+
+\makeatletter
+  \begin{titlepage}
+  \centering
+      {\fontsize{52}{52} \textbf{\textsc{Actulab}}}\\
+    \vspace{2cm}
+    \vspace{2cm}
+    \vspace{2cm}
+      {\fontsize{20}{20}\textbf{\@title}} \\
+    \vfill
+       {\Huge \@author} \\
+    \vspace{8cm}
+    \vfill
+  \end{titlepage}
+\makeatother
+
+
+\tableofcontents
+
+\clearpage
+
+%%%%%% SOMMAIRE %%%%%%%%
+\part{Rapport sommaire}
+
+\section{Détails techniques sommaires}
+
+\subsection*{Analyse du mandat}
+
+Déterminer la distribution d'une ou plusieurs variables sur un territoire. Prédire la distribution des personas sur un territoire à l'aide de la distribution des variables.
+
+\subsection*{Collecte des données}
+
+Voici la liste des différents rapports et données ayant été utilisés lors de la réalisation du rapport :
+
+\begin{itemize}
+\item Données libres du recensement canadien de \href{http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/download-telecharger/comp/page_dl-tc.cfm?Lang=F}{2016} 
+\item Listes des études utilisées pour les hypothèses :
+     \begin{itemize}
+     \item Bulletin d'information statistique du ministère de la Famille du Québec : \href{https://www.mfa.gouv.qc.ca/fr/Famille/chiffres-famille-quebec/bulletin_quelle_famille/Pages/aut2013_no1_tab4.aspx}{Quelle famille ?};
+     \item Enquête nationale auprès des ménages \href{http://www12.statcan.gc.ca/nhs-enm/2011/dp-pd/dt-td/Rp-fra.cfm?TABID=2&LANG=F&A=R&APATH=3&DETAIL=0&DIM=0&FL=A&FREE=0&GC=24&GL=-1&GID=1118301&GK=1&GRP=1&O=D&PID=106042&PRID=0&PTYPE=105277&S=0&SHOWALL=0&SUB=0&Temporal=2013&THEME=96&VID=0&VNAMEE=&VNAMEF=&D1=2&D2=0&D3=0&D4=0&D5=0&D6=0}{2011};
+     \item Statistiques de l'enseignement supérieur \href{http://www.education.gouv.qc.ca/fileadmin/administration/librairies/documents/Ministere/acces_info/Statistiques/Statistiques_ES/Statistiques_enseignement_superieur_2013.pdf}{2013}.
+     \end{itemize}
+\item Polygones des régions de tri d'acheminement \href{http://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-fra.cfm}{national}
+\item Listes des régions de tri \href{https://fr.wikipedia.org/wiki/Liste_des_codes_postaux_canadiens_débutant_par_J}{d'acheminement}
+\end{itemize}
+
+\section{Hypothèse utilisée}
+
+Hypothèses utilisées pour le projet :
+\begin{enumerate}
+\item Indépendance entre les variables
+\item Distribution uniforme sur les intervalles d'âges
+\item Distribution uniforme des travailleurs (provincial)
+\item Distribution uniforme des étudiants (provincial)
+\item Distribution uniforme des colocataires (provincial)
+\item Retraite à 65 ans
+\end{enumerate}
+
+\section{Application \emph{Shiny}}
+
+Afin de visualiser la distribution des personas et de permettre une flexibilité d'analyse future, une application \href{https://www.rstudio.com/products/shiny/}{\emph{Shiny}} à été développée. L'application en soi correspond aux résultats de la modélisation et constitue l'ensemble du projet. Cette \href{https://davebulaval.shinyapps.io/personnasIdentificateur/}{application} permet de:
+\begin{itemize}
+\item sélectionner les différentes variables à modéliser;
+\item de modéliser visuellement la densité de la distribution;
+\item d'afficher les territoires observés;
+\item d'afficher, par région de tri d'acheminement, la population totale et la prédiction du nombre de personas identifier dans cette région.
+\end{itemize}
+
+\begin{moreInfo}{\color{Gray}\emph{Utilisation}
+     \color{black}}
+Pour utiliser l'application, il suffit d'accéder à la page web et de sélectionner les variables désirées. Pour afficher les informations de la région de tri d'acheminement, il suffit de glisser le curseur sur celle-ci.
+     \newline
+     Le délai d'exécution peut parfois prendre quelques secondes. 
+\end{moreInfo}
+
+\section{Résultat sommaire}
+
+Les distributions du persona 1 et du persona 5 peuvent être ajustées selon des lois Normales. Par contre, pour les trois autres personas, le modèle ne permet pas d'ajuster à une loi de distribution connue. On peut consulter les prédictions des personas plus loin dans le rapport.
+
+\section{Code source}
+
+Il est possible de consulter l'ensemble du code source et les données utilisées pour le projet à partir de la \href{https://davebulaval.github.io/Actulab_COOP/}{page web} du dépôt \href{https://github.com/davebulaval/Actulab_COOP}{\emph{GitHub}}.
+
+\section{Auteur}
+\href{mailto:david.beauchemin.5@ulaval.ca}{David Beauchemin}, étudiant en actuariat à l'Université Laval.
+
+
+\newpage
+
+
+\end{document}
