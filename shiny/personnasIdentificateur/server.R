@@ -1,41 +1,13 @@
 library(leaflet)
 library(shiny)
 
-source( "load_data.R" )
-
+source( "loadData.R" )
+source( "librairieFonction.R" )
 shinyServer(function(input, output) {
      
      output$map <- renderLeaflet({
           probProduitCumul <- 1
-          if(input$selectRegion == 1){
-               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 3) %in% c("J8P", "J8R", 
-                                                                                             "J8T", "J8V"))
-               dataSetPredictCity <- subset(dataSetPredict, 
-                                            substr(dataSetPredict$GEO_CODE, 1, 3) %in% c("J8P", "J8R",
-                                                                                         "J8T", "J8V"))
-          } else if (input$selectRegion == 2) {
-               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 2) %in% "H7") 
-               dataSetPredictCity <- subset(dataSetPredict, 
-                                            substr(dataSetPredict$GEO_CODE, 1, 2) %in% "H7")
-          } else if (input$selectRegion == 3) {
-               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 3) %in% c("J4G", "J4H", 
-                                                                                             "J4J", "J4K", 
-                                                                                             "J4L", "J4M", 
-                                                                                             "J4N"))
-               dataSetPredictCity <- subset(dataSetPredict, 
-                                            substr(dataSetPredict$GEO_CODE, 1, 3) %in% c("J4G", "J4H", 
-                                                                                         "J4J", "J4K", 
-                                                                                         "J4L", "J4M", 
-                                                                                         "J4N"))
-          } else if (input$selectRegion == 4) {
-               FSA.shapeCity <- subset(FSA.shapeQC, substr(FSA.shapeQC$RTACIDU, 1, 2) %in% c("H1", "H2", "H3",
-                                                                                             "H4", "H5", "H8",
-                                                                                             "H9"))
-               dataSetPredictCity <- subset(dataSetPredict, 
-                                            substr(dataSetPredict$GEO_CODE, 1, 2) %in% c("H1", "H2", "H3",
-                                                                                         "H4", "H5", "H8",
-                                                                                         "H9"))
-          }
+          FSA.shapeCity <- selectionRegion(input$selectRegion)
           
           #
           # Variable salaire
