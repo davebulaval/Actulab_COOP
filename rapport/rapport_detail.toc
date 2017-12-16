@@ -1,0 +1,34 @@
+\select@language {french}
+\select@language {french}
+\contentsline {part}{I\hspace {1em}Rapport sommaire}{4}{part.1}
+\contentsline {section}{\numberline {1}D\IeC {\'e}tails techniques sommaires}{4}{section.1}
+\contentsline {section}{\numberline {2}Hypoth\IeC {\`e}se utilis\IeC {\'e}e}{4}{section.2}
+\contentsline {section}{\numberline {3}Application \emph {Shiny}}{4}{section.3}
+\contentsline {section}{\numberline {4}R\IeC {\'e}sultat sommaire}{5}{section.4}
+\contentsline {section}{\numberline {5}Code source}{5}{section.5}
+\contentsline {section}{\numberline {6}Auteur}{5}{section.6}
+\contentsline {part}{II\hspace {1em}Rapport d\IeC {\'e}taill\IeC {\'e}}{6}{part.2}
+\contentsline {section}{\numberline {7}D\IeC {\'e}tails de la probl\IeC {\'e}matique}{6}{section.7}
+\contentsline {section}{\numberline {8}D\IeC {\'e}tails techniques}{6}{section.8}
+\contentsline {subsection}{\numberline {8.1}Mandat}{6}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Collecte des donn\IeC {\'e}es}{6}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Traitement des donn\IeC {\'e}es}{8}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Caract\IeC {\'e}ristiques des personas}{8}{subsubsection.8.3.1}
+\contentsline {section}{\numberline {9}Objectif}{9}{section.9}
+\contentsline {section}{\numberline {10}Outils utilis\IeC {\'e}s}{9}{section.10}
+\contentsline {section}{\numberline {11}M\IeC {\'e}thodologie}{9}{section.11}
+\contentsline {subsection}{\numberline {11.1}Ind\IeC {\'e}pendance des variables}{10}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Distribution uniforme sur les intervalles d'\IeC {\^a}ges}{10}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Distribution uniforme des travailleurs}{11}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.4}Distribution uniforme des \IeC {\'e}tudiants}{11}{subsection.11.4}
+\contentsline {subsection}{\numberline {11.5}Distribution uniforme des colocataires}{11}{subsection.11.5}
+\contentsline {subsection}{\numberline {11.6}Retraite \IeC {\`a} 65 ans}{12}{subsection.11.6}
+\contentsline {section}{\numberline {12}Avantage-Inconv\IeC {\'e}nient}{12}{section.12}
+\contentsline {section}{\numberline {13}R\IeC {\'e}sultats}{13}{section.13}
+\contentsline {subsection}{\numberline {13.1}Jacob}{13}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Maria}{17}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}David}{20}{subsection.13.3}
+\contentsline {subsection}{\numberline {13.4}Claire}{22}{subsection.13.4}
+\contentsline {subsection}{\numberline {13.5}Daniel}{24}{subsection.13.5}
+\contentsline {section}{\numberline {14}Pistes d'am\IeC {\'e}liorations}{30}{section.14}
+\contentsline {section}{\numberline {15}Conclusion}{31}{section.15}

@@ -1,0 +1,21 @@
+---
+title: "Actulab - Co-operators"
+subtitle: "Où sont les clients que nous ciblons ?"
+author: "David Beauchemin"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+     ioslides_presentation:
+          logo: fig/images.png
+          widescreen: true
+          smaller: true
+          transition: slower
+          css: styles.css
+          toc: true
+---
+
+# Plan de la présentation
+
+## Plan de la présentation
+ 1.
+ 2.
+ 

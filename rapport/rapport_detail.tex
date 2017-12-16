@@ -98,19 +98,33 @@
   % Creation of environment to add additional informations
   % Provided by Samuel Cabral Cruz
 \mdfsetup{
+	linecolor=darkgray,
 	linewidth=2pt,
 	nobreak=true,
-	backgroundcolor=Blue!10,
+	backgroundcolor=NavyBlue!10,
 	roundcorner=10pt}	
+%% Environnement informatif
 \newenvironment{moreInfo}[1]
 	{\begin{mdframed}
-	\textcolor{darkgray}{\huge \raisebox{-3.5pt}{\faInfo} 
+	\textcolor{NavyBlue}{\huge \raisebox{-3.5pt}{\faInfo} 
 	\hspace{0.5cm} \large\bfseries #1}\\[5pt]
 	\normalsize
 	\makebox[0.1\textwidth][l]{}	
 	\begin{minipage}{10cm}}
 	{	\end{minipage}
 	\end{mdframed}}
+	
+%% Environnement Personna
+\newenvironment{userInfo}[1]
+	{\begin{mdframed}
+	\textcolor{NavyBlue}{\huge \raisebox{-3.5pt}{\faUser} 
+	\hspace{0.5cm} \large\bfseries #1}\\[5pt]
+	\normalsize
+	\makebox[0.1\textwidth][l]{}	
+	\begin{minipage}{10cm}}
+	{	\end{minipage}
+	\end{mdframed}}
+
 
 %% Changement font TOC
 \usepackage{tocloft}
@@ -202,7 +216,7 @@ Afin de visualiser la distribution des personas et de permettre une flexibilité
 \item d'afficher, par région de tri d'acheminement, la population totale et la prédiction du nombre de personas identifier dans cette région.
 \end{itemize}
 
-\begin{moreInfo}{\color{Gray}\emph{Utilisation}
+\begin{moreInfo}{\color{NavyBlue}\emph{Utilisation}
      \color{black}}
 Pour utiliser l'application, il suffit d'accéder à la page web et de sélectionner les variables désirées. Pour afficher les informations de la région de tri d'acheminement, il suffit de glisser le curseur sur celle-ci.
      \newline
@@ -276,45 +290,55 @@ Avant de débuter la manipulation des données, l'analyse des caractéristiques 
 \subsubsection{Caractéristiques des personas}
 On note les caractéristiques suivantes pour les différents profils types :
 
-\subsubsection*{Persona 1}
+\begin{userInfo}{\color{MidnightBlue}\emph{Persona 1}
+     \color{black}}
 \label{per1}
 \begin{itemize}
-\item[Âge :] entre 16 et 26 ans - (Génération \emph{millenials});
+\item[Âge :] entre 16 et 26 ans - (Génération \emph{millenials})
 \item[Salaire annuel :] \numprint{20000} \$
 \item[Occupation :] Étudiant
-\end{itemize}
+\end{itemize} 
+\end{userInfo}
 
-\subsubsection*{Persona 2}
+\begin{userInfo}{\color{MidnightBlue}\emph{Persona 2}
+     \color{black}}
 \label{per2}
 \begin{itemize}
-\item[Âge :] entre 32 et 39 ans - (fin de la génération \emph{x} et début de la génération \emph{millenials});
+\item[Âge :] entre 32 et 39 ans - (fin de la génération \emph{x} et début de la génération \emph{millenials})
 \item[Occupation :] Comptable
 \item[Salaire annuel :] \numprint{51000} \$
 \end{itemize}
+\end{userInfo}
 
-\subsubsection*{Persona 3}
+\begin{userInfo}{\color{MidnightBlue}\emph{Persona 3}
+     \color{black}}
 \label{per3}
 \begin{itemize}
-\item[Âge :] entre 40 et 52 ans - (Génération \emph{x});
+\item[Âge :] entre 40 et 52 ans - (Génération \emph{x})
 \item[Occupation :] Travailleur autonome - propriétaire d'une PME
 \item[Salaire annuel :] \numprint{105000} \$
 \end{itemize}
+\end{userInfo}
 
-\subsubsection*{Persona 4}
+\begin{userInfo}{\color{MidnightBlue}\emph{Persona 4}
+     \color{black}}
 \label{per4}
 \begin{itemize}
-\item[Âge :] entre 53 et 65 ans - (Génération \emph{baby-boom});
+\item[Âge :] entre 53 et 65 ans - (Génération \emph{baby-boom})
 \item[Occupation :] Enseignante
 \item[Salaire annuel :] \numprint{50000} \$
 \end{itemize}
+\end{userInfo}
 
-\subsubsection*{Persona 5}
+\begin{userInfo}{\color{MidnightBlue}\emph{Persona 5}
+     \color{black}}
 \label{per5}
 \begin{itemize}
-\item[Âge :] entre 66 et 76 ans - (Génération \emph{baby-boom});
+\item[Âge :] entre 66 et 76 ans - (Génération \emph{baby-boom})
 \item[Occupation :] Retraité
 \item[Salaire annuel :] \numprint{43000} \$
 \end{itemize}
+\end{userInfo}
 \bigskip
 
 Pour l'ensemble des personas,  les caractéristique d'âge, d’état civil et de type d'occupation peuvent facilement être extraites du recensement. Par contre, pour les autres variables telles que  des hypothèses et de la simplification ont été nécessaires pour obtenir l'information.
@@ -331,7 +355,7 @@ L'objectif de ce projet est de répondre aux mandats de Co-operators, soit d'off
 Les différents outils numériques utilisés lors de la résolution de cette problématique sont l'utilisation de statistique R. Ayant une solide formation informatique avec R, l'utilisation de ce langage parait plutôt évidente. Par contre, on note différents avantages notables de R par rapport aux différentes alternatives telles qu’ Excel/VBA ou Python. Tout d'abord, la possibilité de créer une application \emph{Shiny} est l'une des principales motivations qui ont justifié l'utilisation de R. De plus, la grande communauté R et la quantité importante de \emph{package} à aussi permis de traiter les fichiers de polygone cartographique et l'affichage d'une carte dynamique. Ces deux avantages ont dans leurs ensembles été déterminants dans la décision d'utiliser R.
 \bigskip
 
-\begin{moreInfo}{\color{Gray}À propos de \emph{Shiny}
+\begin{moreInfo}{\color{NavyBlue}À propos de \emph{Shiny}
      \color{black}}
      Une application \href{https://shiny.rstudio.com}{\emph{Shiny}} correspond à une application écrite en R qui utilise un serveur pour effectuer les calculs. Cette application sera donc disponible sur une page web. L'utilisation sous certaines conditions est gratuite via  \href{https://www.shinyapps.io}{\emph{Shinyapps}}.
 \end{moreInfo}
